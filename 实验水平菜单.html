@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟水平菜单</title>
+    <style>
+        #list{
+            width: 880px;
+            height: 20px;
+
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #list .item{
+            width: 200px;
+            height: 50px;
+            background: #ffff00;
+            float: left;
+
+        }
+        /*弄没前面那个点*/
+        li{
+            list-style: none;
+        }
+        #list .item{
+            text-align:center;
+            line-height:50px;
+            margin-right: 10px;
+            cursor:pointer;
+        }
+        #list .item:hover {
+            background: greenyellow;
+        }
+        #list .submenu
+        {
+            background: #ff0000;
+            cursor: pointer;
+            display: none;
+        }
+        /*点第二的时候出现子菜单*/
+        #list .item:hover > .submenu {
+            display: block;
+
+        }
+        #list .submenu >li:hover{
+            background: #009933;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li class="item">第一</li>
+    <li class="item">第二
+        <ul class="submenu">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+        </ul>
+    </li>
+    <li class="item">第三</li>
+    <li class="item">第四</li>
+</ul>
+</body>
+</html>
