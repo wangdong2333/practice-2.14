@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位练习</title>
+    <style>
+        body{
+            margin: 0;
+            height: 8000px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+
+        }
+        .box1{
+            background: #ff0000;
+            position: relative;
+            top:20px;
+
+        }
+        .box2{
+            background: #ffff00;
+            position: relative;
+            top:50px;
+            left: 50px;
+        }
+        .box3{
+            background: #000000;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background: #cccccc;
+            position: absolute;
+            top:20px;
+            right: -20px;
+
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            background:#00ff00;
+            position: fixed;
+            top: 300px;
+            left: 10px;
+
+        }
+        .box6{
+            background:#009933;
+            height: 60px;
+            position: sticky;
+            top:0;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2">相对定位
+    <div class="box4">
+         绝对定位
+    </div>
+</div>
+<div class="box box3"></div>
+<div class="box5">固定定位</div>
+<div class="box6">粘性定位</div>
+<h1 style="background: #0923ff;">这是一个定位训练</h1>
+</body>
+</html>
