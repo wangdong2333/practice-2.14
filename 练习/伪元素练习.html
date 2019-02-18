@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style>
+        #div1::after{
+            content: '练习';
+            background: #ffff00;
+            /*display: inline-block;*/
+            /*width: 200px;*/
+        }
+        #div1::before{
+            content: 'hhhh';
+            background: #ff0000;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">伪元素</div>
+</body>
+</html>
