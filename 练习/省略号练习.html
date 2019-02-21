@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省略号</title>
+    <style>
+        .div1{
+            width: 200px;
+            /*height: 200px;*/
+            border: 1px solid;
+            margin-left: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #div1{
+            width: 200px;
+            border: 1px solid;
+            margin-top: 200px;
+            margin-left: 200px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2 ;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">我住长江头，君住长江尾。日日思君不见君，共饮长江水。</div>
+    <div id="div1">我住长江头，君住长江尾。日日思君不见君，共饮长江水。</div>
+</body>
+</html>
