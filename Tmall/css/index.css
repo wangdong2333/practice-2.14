@@ -1,0 +1,399 @@
+
+#quick-menu {
+    float: right;
+}
+#quick-menu .menu{
+    float: left;
+    padding: 0 14px;
+    position: relative;
+}
+#login-info {
+    float: left;
+}
+#header {
+    height: 32px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    line-height: 32px;
+}
+#login-info a{
+    padding-left: 12px;
+}
+#login-info a:hover{
+    color: #ff0036;
+}
+#quick-menu .menu:hover a{
+    color: #ff0036;
+}
+#quick-menu .iconfont{
+    color: #ff0036;
+}
+#quick-menu .triangle ：hover{
+    background: #ffffff;
+}
+#quick-menu .triangle:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #000000 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    /*margin-left: 50px;*/
+    /*margin-right: 10px;*/
+    right:4px;
+}
+
+#quick-menu .triangle:hover::after {
+    transform: rotate(180deg);
+    transform-origin: 3px 1.5px;
+    transition: transform .2s linear;
+}
+
+#quick-menu .arrow1{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color:transparent transparent   #ffffff transparent  ;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 22px;
+    /*right: 4px;*/
+}
+
+#quick-menu .triangle{
+    position: relative;
+    /*display: block;*/
+}
+#quick-menu .submenu1{
+    display: none;
+    cursor: pointer;
+    background: #ffffff;
+    position: absolute;
+    width: 76px;
+}
+#quick-menu .triangle:hover > .submenu1{
+
+    display: block;
+}
+#quick-menu .submenu1 li:hover{
+    color: red;
+}
+#quick-menu img{
+    position: absolute;
+    left: -35px;
+    top: 30px;
+    box-shadow: 0 0 5px #aaa;
+    /*top:4px;*/
+}
+#quick-menu .submenu2{
+    display: none;
+
+}
+#quick-menu .picture:hover > .submenu2{
+    display: block;
+}
+#quick-menu .submenu3{
+    width: 120px;
+    border-style: dashed;
+    border-width: 1px;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    /*top: 50px;*/
+    /*height: 100px;*/
+}
+#quick-menu .submenu4{
+    display: none;
+
+    /*height: 200px;*/
+
+}
+#quick-menu .submenu0{
+    position: absolute;
+}
+#quick-menu .triangle:hover  .submenu3 {
+    display: block;
+
+}
+#quick-menu .triangle:hover  .submenu4 {
+    display: block;
+}
+#quick-menu .submenu3  li:hover{
+    color: #ff0000}
+
+#quick-menu .submenu3 li{
+    float: left;
+    padding: 0 5px;
+    /*height: 220px;*/
+}
+
+/*side-bar*/
+#side-bar{
+    background: #000000;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom:0 ;
+    width: 30px;
+}
+#side-bar .icon-gouwuchekong{
+    color: #ffffff;
+    float: left;
+    margin-top: 210px;
+    font-size: 30px;
+
+}
+#side-bar .icon-shouji01{
+    color: #ffffff;
+    float: left;
+    margin-top: 240px;
+    font-size: 30px;
+
+}
+#side-bar .icon-daohang{
+    color: #ffffff;
+    float: left;
+    margin-top: 50px;
+    font-size: 30px;
+    /*position: absolute;*/
+    /*top: 350px;*/
+    /*right: 0;*/
+}
+#side-bar .vip{
+    color: #ffffff;
+    width: 90px;
+    height: 30px;
+    background: #000000;
+    position: absolute;
+    top: 215px;
+    left: -150px;
+    text-align: center;
+    line-height: 30px;
+    transition:all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+#side-bar .zichan{
+    color: #ffffff;
+    width: 90px;
+    height: 30px;
+    background: #000000;
+    position: absolute;
+    top: 485px;
+    left: -150px;
+    text-align: center;
+    line-height: 30px;
+    transition:all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+#side-bar .content:hover .vip {
+    left: -90px;
+    opacity: 1;
+    visibility: visible;
+}
+#side-bar .content:hover .zichan {
+    left: -90px;
+    opacity: 1;
+    visibility: visible;
+}
+#side-bar .arrow{
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    position: absolute;
+    top:5px;
+    right: -5px;
+    transform: rotate(45deg);
+}
+#side-bar .right-picture{
+    position: absolute;
+    /*left: 200px;*/
+    margin-top: 450px;
+    /*margin-right: 50px;*/
+    right: 40px;
+    z-index: 999;
+}
+#side-bar .right-picture{
+    display: none;
+
+}
+#side-bar .content:hover .right-picture{
+    display: block;
+}
+/*logo-search开始*/
+#logo-search .search{
+    float: right;
+}
+#logo-search .logo{
+    float: left;
+    margin-left: -120px;
+}
+#logo-search .wrapper {
+    position: relative;
+}
+
+#logo-search .search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#logo-search .search-input{
+    border: none;
+    width: 483px;
+    height: 100%;
+    font-size: 18px;
+    text-indent: 10px;
+    outline: none;
+}
+#logo-search .search-form {
+    width: 623px;
+    height: 36px;
+    border: 2px solid #ff0036;
+}
+#logo-search .search-btn{
+    width: 132px;
+    height: 100%;
+    background: #ff0036;
+    color: #fff;
+    float: right;
+    letter-spacing: 5px;
+    border: none;
+    font-size: 20px;
+    padding-left: 1px;
+}
+#logo-search .hot-query li{
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 12px;
+}
+#logo-search .hot-query {
+    margin-top: 5px;
+}
+#logo-search .hot-query a{
+    font-size: 14px;
+    color: #999999;
+}
+#logo-search .hot-query .last {
+    border-right: none;
+}
+#logo-search .hot-query-highlight a{
+    color: red;
+}
+#logo-search .hot-query .frist{
+    padding-left: 0;
+}
+
+/*logo-search结束*/
+#main-nav li {
+    float: left;
+    padding: 0 8px;
+
+}
+#main-nav .nav-img {
+    width: 100px;
+    height: 30px;
+    margin-top: 3px;
+}
+.wrapper{
+    width: 1100px;
+}
+#main-nav .wrapper{
+    margin-left: 250px;
+}
+#main-nav a{
+    color: #000000;
+}
+#main-nav{
+    height: 35px;
+    line-height: 35px;
+}
+#main-nav .wrapper li:hover a{
+    /*color: red;*/
+}
+
+/*banner 开始*/
+#banner{
+    background: #f00;
+}
+#banner .wrapper{
+    height: 500px;
+    /*margin-right: 250px;*/
+    background: url(../font/big-picture.webp) no-repeat ;
+    position: relative;
+    left: -30px;
+    /*z-index: -1;*/
+}
+#banner .banner-nav li {
+    width: 25px;
+    height: 5px;
+    background: #fff;
+    opacity: .3;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#banner .banner-nav{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50% );
+}
+
+#banner .banner-nav .selected{
+    background: #000;
+}
+#banner .pr{
+    float: left;
+    width: 200px;
+    height: 536px;
+    background-color: rgba(0, 0, 0, .55);
+    position: absolute;
+    top: -36px;
+    left:-45px;
+}
+#banner .pr li {
+    color: #fff;
+    padding-left: 5px;
+}
+#banner .pr a {
+    color: #fff;
+    padding-left: 5px;
+}
+#banner .pr .category{
+    background: #ff0000;
+    height: 36px;
+    line-height: 36px;
+    /*padding-bottom: 15px;*/
+}
+#banner .pr .type{
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+}
+#banner .pr .type:hover{
+    background: #ffffff;
+}
+#banner .pr .type:hover a{
+    color: red;
+}
+/*banner 结束*/
+
+
+
+
+

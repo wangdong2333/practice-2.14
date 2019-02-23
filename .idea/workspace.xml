@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="表单练习 2-19">
+      <change afterPath="$PROJECT_DIR$/.idea/New Study23333.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/font/abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/font/big-picture.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/font/gif-picture.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/font/internation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tmall/font/shoop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/编程/asd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/编程/zxc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/编程/编程.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/编程/编程2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tmall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translate.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/translate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验水平菜单.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/实验水平菜单.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/居中练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/居中练习.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/田字格练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/田字格练习.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/练习/旋转立方体.html" beforeDir="false" afterPath="$PROJECT_DIR$/css3/旋转立方体.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/练习/旋转立方体练习.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/表单练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/表单练习.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/阴影 练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/阴影 练习.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/阴影练习.html" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tmall/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tmall/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1107">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="旋转立方体.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css3/旋转立方体.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transform.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/transform.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="translate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/translate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="783">
+              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="编程.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/编程/编程.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="891">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="田字格练习.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/田字格练习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="五环练习.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css3/五环练习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1242">
+              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="省略号练习.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/省略号练习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/实验三角形.html" />
+        <option value="$PROJECT_DIR$/实验水平菜单.html" />
+        <option value="$PROJECT_DIR$/小实验.html" />
+        <option value="$PROJECT_DIR$/绿点实验.html" />
+        <option value="$PROJECT_DIR$/不显示练习.html" />
+        <option value="$PROJECT_DIR$/定位练习.html" />
+        <option value="$PROJECT_DIR$/居中练习.html" />
+        <option value="$PROJECT_DIR$/Tmall/font.html" />
+        <option value="$PROJECT_DIR$/Tmall/font/index.html" />
+        <option value="$PROJECT_DIR$/练习/浮动练习.html" />
+        <option value="$PROJECT_DIR$/绿点.html" />
+        <option value="$PROJECT_DIR$/练习/动画练习.html" />
+        <option value="$PROJECT_DIR$/练习/伪元素练习.html" />
+        <option value="$PROJECT_DIR$/阴影练习.html" />
+        <option value="$PROJECT_DIR$/阴影 练习.html" />
+        <option value="$PROJECT_DIR$/表单练习.html" />
+        <option value="$PROJECT_DIR$/Tmall/css/common.css" />
+        <option value="$PROJECT_DIR$/Tmall/index.html" />
+        <option value="$PROJECT_DIR$/Tmall/css/index.css" />
+        <option value="$PROJECT_DIR$/translate.html" />
+        <option value="$PROJECT_DIR$/编程.html" />
+        <option value="$PROJECT_DIR$/编程/编程2.html" />
+        <option value="$PROJECT_DIR$/编程/编程.html" />
+        <option value="$PROJECT_DIR$/田字格练习.html" />
+        <option value="$PROJECT_DIR$/css3/五环练习.html" />
+        <option value="$PROJECT_DIR$/练习/省略号练习.html" />
+        <option value="$PROJECT_DIR$/练习/transform.html" />
+        <option value="$PROJECT_DIR$/练习/旋转立方体练习.html" />
+        <option value="$PROJECT_DIR$/练习/旋转立方体.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="726" />
+    <option name="width" value="640" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="New Study23333" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Study23333" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\New Study23333\css3" />
+      <recent name="E:\New Study23333\练习" />
+      <recent name="E:\New Study23333\Tmall\font" />
+      <recent name="E:\New Study23333\编程" />
+      <recent name="E:\New Study23333\Tmall" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\New Study23333\Tmall\font" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="" />
+      <created>1550132132256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550132132256</updated>
+      <workItem from="1550132134306" duration="31000" />
+      <workItem from="1550132177845" duration="143000" />
+      <workItem from="1550132392952" duration="298000" />
+      <workItem from="1550148672887" duration="770000" />
+      <workItem from="1550149799360" duration="6000" />
+      <workItem from="1550152486057" duration="398000" />
+      <workItem from="1550152892825" duration="16000" />
+      <workItem from="1550199051865" duration="22000" />
+      <workItem from="1550203530140" duration="266000" />
+      <workItem from="1550203817612" duration="305000" />
+      <workItem from="1550204159012" duration="679000" />
+      <workItem from="1550214970538" duration="5891000" />
+      <workItem from="1550306369527" duration="11644000" />
+      <workItem from="1550327399414" duration="24000" />
+      <workItem from="1550365624747" duration="12381000" />
+      <workItem from="1550401429895" duration="599000" />
+      <workItem from="1550451131876" duration="6650000" />
+      <workItem from="1550463108927" duration="10753000" />
+      <workItem from="1550487661747" duration="2558000" />
+      <workItem from="1550537280480" duration="6868000" />
+      <workItem from="1550570033700" duration="4711000" />
+      <workItem from="1550623988948" duration="19337000" />
+      <workItem from="1550663046357" duration="3031000" />
+      <workItem from="1550710980846" duration="10584000" />
+      <workItem from="1550752433757" duration="3380000" />
+      <workItem from="1550797844956" duration="6715000" />
+      <workItem from="1550831918239" duration="675000" />
+      <workItem from="1550883725795" duration="2053000" />
+    </task>
+    <task id="LOCAL-00001" summary="实验三角形 2-14">
+      <created>1550132220911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550132220911</updated>
+    </task>
+    <task id="LOCAL-00002" summary="实验水平菜单 2-14">
+      <created>1550132443612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550132443612</updated>
+    </task>
+    <task id="LOCAL-00003" summary="小实验">
+      <created>1550148740974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550148740974</updated>
+    </task>
+    <task id="LOCAL-00004" summary="小实验">
+      <created>1550148786152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550148786152</updated>
+    </task>
+    <task id="LOCAL-00005" summary="小小实验">
+      <created>1550152515771</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550152515771</updated>
+    </task>
+    <task id="LOCAL-00006" summary="绿点实验">
+      <created>1550152624607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550152624607</updated>
+    </task>
+    <task id="LOCAL-00007" summary="不显示练习 2-15">
+      <created>1550203646226</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550203646226</updated>
+    </task>
+    <task id="LOCAL-00008" summary="定位练习 2-15">
+      <created>1550203935474</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550203935474</updated>
+    </task>
+    <task id="LOCAL-00009" summary="居中练习 2-15">
+      <created>1550204215334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550204215334</updated>
+    </task>
+    <task id="LOCAL-00010" summary="为什么没有绿点">
+      <created>1550204351900</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550204351900</updated>
+    </task>
+    <task id="LOCAL-00011" summary="浮动练习 2-16">
+      <created>1550318349097</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550318349097</updated>
+    </task>
+    <task id="LOCAL-00012" summary="动画练习 2-18">
+      <created>1550459650234</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550459650235</updated>
+    </task>
+    <task id="LOCAL-00013" summary="伪元素练习 2-18">
+      <created>1550460479207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1550460479207</updated>
+    </task>
+    <task id="LOCAL-00014" summary="天猫页面练习 2-18">
+      <created>1550494166282</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1550494166282</updated>
+    </task>
+    <task id="LOCAL-00015" summary="伪元素练习（2） 2-18">
+      <created>1550494364893</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550494364893</updated>
+    </task>
+    <task id="LOCAL-00016" summary="阴影练习 2-18">
+      <created>1550494564411</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1550494564411</updated>
+    </task>
+    <task id="LOCAL-00017" summary="阴影练习 2-18">
+      <created>1550494775283</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1550494775283</updated>
+    </task>
+    <task id="LOCAL-00018" summary="表单练习 2-19">
+      <created>1550578985207</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1550578985207</updated>
+    </task>
+    <task id="LOCAL-00019" summary="天猫（增加） 2-19">
+      <created>1550586108995</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1550586108995</updated>
+    </task>
+    <task id="LOCAL-00020" summary="tmall（完善） 2-20">
+      <created>1550666749799</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1550666749799</updated>
+    </task>
+    <task id="LOCAL-00021" summary="translate练习 2-20">
+      <created>1550672588399</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1550672588399</updated>
+    </task>
+    <task id="LOCAL-00022" summary="田字格练习 2-21">
+      <created>1550752798879</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1550752798880</updated>
+    </task>
+    <task id="LOCAL-00023" summary="五环练习 2-21">
+      <created>1550753364957</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1550753364957</updated>
+    </task>
+    <task id="LOCAL-00024" summary="省略号练习 2-21">
+      <created>1550755157625</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1550755157625</updated>
+    </task>
+    <task id="LOCAL-00025" summary="旋转立方体练习 2-19">
+      <created>1550823969547</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1550823969547</updated>
+    </task>
+    <task id="LOCAL-00026" summary="旋转立方体练习 2-22">
+      <created>1550824343299</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1550824343299</updated>
+    </task>
+    <task id="LOCAL-00027" summary="transform练习 2-22">
+      <created>1550825145901</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1550825145901</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="110788000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17203514" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329653" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="实验三角形 2-14" />
+    <MESSAGE value="实验水平菜单 2-14" />
+    <MESSAGE value="小实验" />
+    <MESSAGE value="小小实验" />
+    <MESSAGE value="绿点实验" />
+    <MESSAGE value="不显示练习 2-15" />
+    <MESSAGE value="定位练习 2-15" />
+    <MESSAGE value="居中练习 2-15" />
+    <MESSAGE value="为什么没有绿点" />
+    <MESSAGE value="浮动练习 2-16" />
+    <MESSAGE value="动画练习 2-18" />
+    <MESSAGE value="伪元素练习 2-18" />
+    <MESSAGE value="天猫页面练习 2-18" />
+    <MESSAGE value="伪元素练习（2） 2-18" />
+    <MESSAGE value="阴影练习 2-18" />
+    <MESSAGE value="表单练习 2-19" />
+    <MESSAGE value="天猫（增加） 2-19" />
+    <MESSAGE value="tmall（完善） 2-20" />
+    <MESSAGE value="translate练习 2-20" />
+    <MESSAGE value="田字格练习 2-21" />
+    <MESSAGE value="五环练习 2-21" />
+    <MESSAGE value="省略号练习 2-21" />
+    <MESSAGE value="旋转立方体练习 2-19" />
+    <MESSAGE value="旋转立方体练习 2-22" />
+    <MESSAGE value="transform练习 2-22" />
+    <option name="LAST_COMMIT_MESSAGE" value="transform练习 2-22" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/编程/编程.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/田字格练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css3/五环练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/定位练习.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/练习/不显示练习.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/小实验.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/小实验.html" />
+    <entry file="file://$PROJECT_DIR$/绿点实验.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/小实验.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/小实验.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
+    <entry file="file://$PROJECT_DIR$/绿点实验.html" />
+    <entry file="file://$PROJECT_DIR$/小实验.html" />
+    <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
+    <entry file="file://$PROJECT_DIR$/Tmall/font.html" />
+    <entry file="file://$PROJECT_DIR$/Tmall/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/绿点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阴影练习.html" />
+    <entry file="file://$PROJECT_DIR$/练习/阴影 练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/伪元素练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/实验三角形.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/表单练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tmall/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/动画练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/浮动练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/编程/编程2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/编程/编程.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css3/五环练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/省略号练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/田字格练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/旋转立方体练习.html" />
+    <entry file="file://$PROJECT_DIR$/练习/translate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/transform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css3/旋转立方体.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tmall/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tmall/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
