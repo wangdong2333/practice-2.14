@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="表单练习 2-19">
-      <change afterPath="$PROJECT_DIR$/.idea/New Study23333.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/font/abc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/font/big-picture.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/font/gif-picture.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/font/internation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tmall/font/shoop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/编程/asd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/编程/zxc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/编程/编程.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/编程/编程2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tmall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translate.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/translate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验水平菜单.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/实验水平菜单.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/居中练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/居中练习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/田字格练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/田字格练习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/练习/旋转立方体.html" beforeDir="false" afterPath="$PROJECT_DIR$/css3/旋转立方体.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/练习/旋转立方体练习.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/表单练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/表单练习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/阴影 练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/练习/阴影 练习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/阴影练习.html" beforeDir="false" />
-    </list>
+    <list default="true" id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="表单练习 2-19" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -176,7 +150,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="726" />
     <option name="width" value="640" />
     <option name="height" value="728" />
@@ -213,15 +187,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\New Study23333\Tmall\font" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\New Study23333\css3" />
       <recent name="E:\New Study23333\练习" />
       <recent name="E:\New Study23333\Tmall\font" />
       <recent name="E:\New Study23333\编程" />
       <recent name="E:\New Study23333\Tmall" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\New Study23333\Tmall\font" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -274,6 +248,7 @@
       <workItem from="1550797844956" duration="6715000" />
       <workItem from="1550831918239" duration="675000" />
       <workItem from="1550883725795" duration="2053000" />
+      <workItem from="1551064495730" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="实验三角形 2-14">
       <created>1550132220911</created>
@@ -468,11 +443,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110788000" />
+    <option name="totallyTimeSpent" value="110806000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17203514" />
       <window_info anchor="bottom" id="TODO" order="6" />
