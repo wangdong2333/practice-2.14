@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="表单练习 2-19" />
+    <list default="true" id="3ba6277e-2dbe-4470-bdc7-28dc99800ba8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +14,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tmall/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
               <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="练习（5-2）.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS练习/练习（5-2）.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="练习（5-3）.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS练习/练习（5-3）.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="练习（5-4）.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS练习/练习（5-4）.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="练习（5-1）.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS练习/练习（5-1）.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -59,38 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="编程.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/编程/编程.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="田字格练习.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/练习/田字格练习.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="五环练习.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css3/五环练习.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="省略号练习.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/练习/省略号练习.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -141,6 +150,10 @@
         <option value="$PROJECT_DIR$/练习/transform.html" />
         <option value="$PROJECT_DIR$/练习/旋转立方体练习.html" />
         <option value="$PROJECT_DIR$/练习/旋转立方体.html" />
+        <option value="$PROJECT_DIR$/JS练习/练习（5-2）.html" />
+        <option value="$PROJECT_DIR$/JS练习/练习（5-3）.html" />
+        <option value="$PROJECT_DIR$/JS练习/练习（5-4）.html" />
+        <option value="$PROJECT_DIR$/JS练习/练习（5-1）.html" />
       </list>
     </option>
   </component>
@@ -150,7 +163,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="726" />
     <option name="width" value="640" />
     <option name="height" value="728" />
@@ -160,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,11 +181,15 @@
               <item name="New Study23333" type="b2602c69:ProjectViewProjectNode" />
               <item name="New Study23333" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="New Study23333" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Study23333" type="462c0819:PsiDirectoryNode" />
+              <item name="JS练习" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,6 +267,7 @@
       <workItem from="1550831918239" duration="675000" />
       <workItem from="1550883725795" duration="2053000" />
       <workItem from="1551064495730" duration="18000" />
+      <workItem from="1551185212775" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="实验三角形 2-14">
       <created>1550132220911</created>
@@ -439,14 +458,22 @@
       <option name="project" value="LOCAL" />
       <updated>1550825145901</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="练习题 2-26">
+      <created>1551185337179</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1551185337179</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110806000" />
+    <option name="totallyTimeSpent" value="111224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17203514" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -475,7 +502,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="实验三角形 2-14" />
     <MESSAGE value="实验水平菜单 2-14" />
     <MESSAGE value="小实验" />
     <MESSAGE value="小小实验" />
@@ -500,31 +526,10 @@
     <MESSAGE value="旋转立方体练习 2-19" />
     <MESSAGE value="旋转立方体练习 2-22" />
     <MESSAGE value="transform练习 2-22" />
-    <option name="LAST_COMMIT_MESSAGE" value="transform练习 2-22" />
+    <MESSAGE value="练习题 2-26" />
+    <option name="LAST_COMMIT_MESSAGE" value="练习题 2-26" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/编程/编程.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/田字格练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css3/五环练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/定位练习.html" />
     <entry file="file://$PROJECT_DIR$/练习/实验三角形.html" />
     <entry file="file://$PROJECT_DIR$/练习/实验水平菜单.html" />
     <entry file="file://$PROJECT_DIR$/练习/不显示练习.html" />
@@ -683,6 +688,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS练习/练习（5-2）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS练习/练习（5-3）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS练习/练习（5-4）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS练习/练习（5-1）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
