@@ -10,11 +10,30 @@
     
      <script>
        
-     setTimeout(function (){
-       console.log("1gfchb")
-     },0); 
-     console.log("2gfchb");
-     console.log( "3gfchb");
+    //  setTimeout(function (){
+    //    console.log("1gfchb")
+    //  },0); 
+    //  console.log("2gfchb");
+    //  console.log( "3gfchb");
+
+  //   var i = 0;
+  //  var timer= setInterval(function(){
+  //     console.log(i++) ;
+  //     if(i>10){
+  //       clearInterval(timer);
+  //     }
+  //   },1000);
+
+    var i = 0;
+     var timer=setTimeout(function(){
+       console.log(i++);
+
+     },1000)
+     console.log(typeof timer);
+
+  
+
+     
 
     </script>
 </body>
