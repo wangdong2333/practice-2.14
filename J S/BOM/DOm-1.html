@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="wd">chengxuyuan</h1>
+    <ul id="meau">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+    </ul>
+
+    <ul id="list">
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+    </ul>
+
+    <form action="">
+        <input type="text" name="username">
+    </form>
+
+    <script>
+    var oId = document.getElementById('wd');//获取ID
+    console.log(oId);
+    console.log(document);
+
+    // var aLi = document.getElementsByTagName("li");//获取标签
+    // console.log(aLi);
+
+    var olist = document.getElementById("list");
+    var  aLi = olist.getElementsByTagName("li");
+    console.log(aLi);
+
+    var oUsername = document.getElementsByName('username');
+    console.log(oUsername);
+
+
+
+
+    </script>
+</body>
+</html>
