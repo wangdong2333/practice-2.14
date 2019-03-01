@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">程序员</div>
+    <button id="btn">按键</button>
+    <script>
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function(){
+        console.log(Math.random()*30);
+    }
+
+    var odiv = document.getElementById('div');
+    odiv.onclick = function(){
+        odiv.style.background = "#f00"
+    }
+
+    window.onresize = function(){
+            console.log(Math.random());
+        };
+        
+    </script>
+</body>
+</html>
