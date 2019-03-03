@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getrandom(high,low){
+       return Math.ceil(Math.random()* (high-low) )+low;
+      
+    }
+    var a=getrandom(10,100);
+    document.write(a);
+
+
+           // 随机生成两个小数给变量x.y，然后显示这两个数中的最大值
+        function  getmax(x,y){
+         return   x>y  ? x:y;
+        }
+        var number1 = Math.random();
+        var number2 = Math.random();
+        var a=getmax(number1,number2)
+        console.log(number1 + ',' + number2 + ',' + a);
+
+
+    </script>
+</body>
+</html>
