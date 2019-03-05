@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //     var newa;
+    // function fnc1(){
+    //     return function fnc2(){
+    //         var a = 5;
+    //         newa = a;
+    // }
+
+    // }
+    // fnc1()();
+    // console.log(newa);
+  
+    // function fnc1(){
+    //     return function fnc2(){
+    //         var a = 5;
+    //         return a;
+    // }
+
+    // }
+    // var b=fnc1()();
+    // console.log(b);
+
+        function a(b){
+            console.log('a');
+            b(function(){
+                console.log('c');
+            });
+        }
+
+        a(function (c){
+            console.log('b');
+            c();
+        });
+
+
+
+    
+    </script>
+</body>
+</html>
