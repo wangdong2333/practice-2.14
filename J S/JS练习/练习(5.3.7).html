@@ -41,7 +41,18 @@
             return sum;
 
         }
+
         console.log(fn2(8));
+
+        function fn3(n){
+            var arr = [1,1];
+        for(var i = 2; i <= n; i++){
+            arr[i]= arr[i-1] +arr[i-2];
+        } 
+        return arr[n-1];
+        }
+
+        console.log(fn3(8));
     </script>
 </body>
 </html>
