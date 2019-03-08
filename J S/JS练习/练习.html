@@ -10,11 +10,25 @@
     
     <script>
     
-    function f() {
-            console.log(arguments[0], arguments[1], arguments[2],arguments[3]);
-        }
+    // function f() {
+    //         console.log(arguments[0], arguments[1], arguments[2],arguments[3]);
+    //     }
 
-        f(4, 5, 6);
+    //     f(4, 5, 6);
+
+    var arr = [2,4,7,10,39,20];
+        console.log(arr.sort(function(a, b){
+            return Math.random() - 0.5;  //随机出现
+        }));
+
+        var arr = [5, 6, 7, 8,  10];
+        arr.splice(2, 1);
+        console.log(arr);
+        arr.splice(2);
+        console.log(arr);
+        arr.splice(2, 0, 'a', 'b');
+        console.log(arr);
+        console.log(arr.join('  '));
     </script>
 </body>
 </html>
