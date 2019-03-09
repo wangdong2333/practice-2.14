@@ -77,10 +77,13 @@
     
     <script>
         var aLi = document. getElementsByTagName('li');
+        var 
         for(var i =0; i<aLi.length; i++){
+            aLi.indedx = i;
             aLi[i].onclick = function (){
             for(j = 0;j<aLi.length;j++){
                 aLi[j].className = ' box1';
+                aDiv[j].className = '';
             }
             this.className = 'active';
             }
