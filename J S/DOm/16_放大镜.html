@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #left{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            float: left;
+        }
+        #right{
+            float: left;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            display: none;
+        }
+       #le{
+            width: 200px;
+            height: 200px;
+            background:rgba(176, 199, 199, 0.6);
+            position: absolute;
+            display: none;
+            left : 0;
+            top: 0;
+        }
+      #big{
+          position: absolute;
+      }
+    </style>
+<body>
+   
+    <div id="left">
+        <img  src="imgs/1.jpg" alt="">
+        <span id="le"></span>
+    </div>
+    <div id="right">
+        <img id="big" src="imgs/2.jpg" alt="">
+    </div>
+    
+    <script>
+       var  oLeft = document.getElementById('left');
+       var  oLe = document.getElementById('le');
+       var  oRight = document.getElementById('right');
+       var  oBig = document.getElementById('big');
+        oLeft.onmouseover = function(){            
+            oLe.style.display = 'block';
+            oRight.style.display = "block";
+            oLeft.onmousemove = function(e){
+                var x= e.clientX -oLe.offsetWidth/2 ;
+                var y= e.clientY -oLe.offsetHeight/2;
+                if(x < 0){
+                    x= 0;
+                }
+                if(y < 0){
+                  y = 0 ;
+                }
+                var  xMax = oLeft.offsetWidth - oLe.offsetWidth;
+               var  yMax = oLeft.offsetHeight - oLe.offsetHeight;
+
+                if(x > xMax){
+                    x = xMax
+                }
+                if(y > yMax){
+                    y = yMax;
+                }
+                oLe.style.left = x +  'px'; 
+                oLe.style.top = y +  'px'; 
+                oBig.style.left = -2*x + 'px';//负值  小图往右走，大图往左走
+                oBig.style.top = -2*y + 'px';
+            }
+        }
+        
+    </script>
+</body>
+</html>
