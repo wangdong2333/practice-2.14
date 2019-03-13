@@ -76,11 +76,15 @@
                 }
                 oLe.style.left = x +  'px'; 
                 oLe.style.top = y +  'px'; 
+                //大图的offsetWidth / 小图的offsetWidth = 2
                 oBig.style.left = -2*x + 'px';//负值  小图往右走，大图往左走
                 oBig.style.top = -2*y + 'px';
             }
         }
-        
+        oLeft.onmouseout = function(){
+            oLe.style.display = 'none';
+            oRight.style.display = "none";
+        }
     </script>
 </body>
 </html>
