@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点练习</title>
+</head>
+<body>
+    <div id="div1">
+        <span>haha</span>
+    </div>
+    <ul>
+        <li  id="li1">001</li>
+        <li  id="li2">002</li>
+    </ul>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        console.log(oDiv1.nodeType);
+        console.log(oDiv1.firstChild.nodeType);
+
+        var oLi1 = document.getElementById('li1');
+        var oLi2 = document.getElementById('li2');
+        function next(elem){
+            do{
+                elem = elem.nextSibling;
+            }while(elem && elem.nodeType != 1);
+            return elem;
+        }
+        alert(next(oLi2));
+    </script>
+</body>
+</html>
