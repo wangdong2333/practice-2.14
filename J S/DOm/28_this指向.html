@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #div1 {
+        width: 200px;
+        height: 200px;
+        background: #f00;
+    }
+
+    #div2 {
+        width: 100px;
+        height: 100px;
+        background: #ff0;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        div1
+        <div id="div2">
+            div2
+        </div>
+    </div>
+    <script>
+        function a() {
+            // console.log(this);
+        }
+        a();
+
+        // setInterval(function(){
+        //      console.log(this);
+        //  }, 2000);
+
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function (e) {
+            // console.log(this);
+            // console.log(e.target);
+        }
+
+        var obj = {
+            name:'zs',
+            age : 30,
+            say : function(){
+                // console.log(this.say);
+            }
+          
+        }
+        obj.say();
+
+        function Person(a){
+            this.name = a
+        }
+        var person1 = new Person('zs')
+        var person2 = new Person('ls')
+        console.log(person1.name + '\n'+ person2.name);
+    </script>
+</body>
+
+</html>
