@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        #ul1{
+            background: #f00;
+        }
+        li{
+            background: #0f0;
+        }
+
+    </style>
+   
+<body>
+    <button id="btn"> click</button>
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>        
+    </ul>
+    <script>
+    var aLi= document.getElementsByTagName('li'); 
+    var oUl = document.getElementById('ul1');
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function(){
+        var ali = document.createElement('li');
+        ali.innerHTML = Math.random();
+        oUl.appendChild(ali);
+    }
+    oUl.onclick = function(e){
+        if(e.target.tagName ==  'LI'){
+            console.log(e.target.innerHTML);
+        }
+        
+    }
+    
+    
+    </script>
+</body>
+</html>
