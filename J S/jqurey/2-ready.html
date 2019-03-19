@@ -7,8 +7,23 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="jquery-1.12.4.js"></script>
     <script>
-        
+         // 事件 等页面中所有的资源(包括图片，视频等)都加载完毕
+        // window.onload = function(){
+        //     console.log(1111);
+        // }
+        // window.onload = function(){
+        //     console.log(2222);
+        // }
+
+        // 文档就绪函数 等页面中文档结构加载完就执行 不等资源
+        $(function(){
+            console.log(1111);
+        });
+        $(function(){
+            console.log(2222);
+        })
     </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        //定义对象
     var obj = {
         name : 'chengxuyuan',
         age :20,
@@ -16,17 +17,18 @@
         }
     }
     obj.eat();
- 
+    //定义类   注意cat大写为类
     function Cat(name,age){
         this.name = name;
         this.age = age;
     }
+    //原型  定义在Cat类下方，下面只要new  一个cat，都有这个属性
     Cat.prototype.eat = function(){
         console.log(this.name + this.age+'eating....');
     }
 
     var Cat1 = new Cat ('wangwu',18);
-    Cat1.eat();
+    Cat1.eat();//调用eat属性
 
 
     </script>
