@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: #ffff00;
+        }
+    </style>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <script>
+        var odiv1 = document.getElementById('div1');
+        var odiv2 = document.getElementById('div2');
+        odiv1.addEventListener('click',function(){
+            console.log("div1  冒泡");
+        },false);
+        odiv2.addEventListener('click',function(){
+            console.log("div2  冒泡");
+        },false);
+        odiv1.addEventListener('click',function(){
+            console.log("div1  捕获");
+        },true);
+        odiv2.addEventListener('click',function(){
+            console.log("div2  捕获");
+        },true);
+        //    冒泡false   // 事件冒泡 从里向外 
+        //     捕获 true     事件捕获 从外向里
+        // 既有捕获 又有冒泡  先捕获再冒泡 （先从外到里 再从里往外 ）
+
+
+
+    
+    </script>
+</body>
+</html>
