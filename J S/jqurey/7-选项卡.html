@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    #container{
+        width: 300px;
+        height: 300px;
+        /* background: #cccccc; */
+    }
+    ul{
+        overflow: hidden;
+    }
+    li{
+        list-style: none;
+        float: left;
+        width: 80px;
+        height: 40px;
+        margin-right:3px;
+        background: #ccc;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: #000000  2px  solid;
+
+    }
+    #content div{
+        width: 300px;
+        height: 260px;
+        /* background: #00ff00; */
+        display: none;
+        border: 3px  solid  ;
+    }
+    #content .selected{
+        display: block;
+    }
+    .active{
+        background: #00ffff;
+    }
+    </style>
+<body>
+     <div id="container">
+        <!-- 点击按钮 -->
+        <ul>
+            <li class="active">时事</li>
+            <li>体育</li>
+            <li>娱乐</li>
+        </ul>
+        <!-- 内容区域 -->
+        <div id="content">
+            <div class="selected">时事</div>
+            <div>体育</div>
+            <div>娱乐</div>
+        </div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('li').on('click',function(){
+            //按钮变样式
+            $(this).addClass("active").siblings()
+            .removeClass('active');
+            //div变样式
+            console.log($(this).index());
+            $('#content div').eq($(this).index()).addClass('selected')
+            .siblings().removeClass('selected');
+        });
+        
+
+    
+    </script>
+    
+    
+</body>
+</html>
