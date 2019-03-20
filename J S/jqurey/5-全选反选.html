@@ -29,7 +29,16 @@
         // console.log(111);
         $(":checkbox").prop("checked" ,true);
     })
-
+    $('#CheckedNo').on('click',function(){
+        $(':checkbox').prop('checked',false);
+    })
+    $("#CheckedRev").on('click',function(){
+        $(":checkbox").each(function(index,Element){
+            console.log(index,Element);
+            Element.checked = !Element.checked;
+        })
+    })
+   
     
 </script>
 </body>
