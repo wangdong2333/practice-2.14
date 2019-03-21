@@ -69,10 +69,11 @@
             $(this).addClass("active").siblings()
             .removeClass('active');
             //div变样式
-            console.log($(this).index());
+            console.log($(this).index());//jq中的索引
             $('#content div').eq($(this).index()).addClass('selected')
             .siblings().removeClass('selected');
         });
+        
         
 
     
