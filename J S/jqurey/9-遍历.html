@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历</title>
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+</style>
+
+<body>
+    <div id="div1" class="aa">
+        <span>fghjkl</span>
+        <div>
+            <span>aaaaaaa</span>
+        </div>
+    </div>
+    <ul>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+    </ul>
+    <script src="../jqurey/jquery-1.12.4.js"></script>
+    <script>
+        $('li').eq(1).css('background', '#0ff');
+        console.log($('#div1').children());
+        // console.log($('#div1').find());
+        $('#div1').children().css('background','red').end()
+        .css('border','2px solid #00f')
+
+
+    </script>
+</body>
+
+</html>
