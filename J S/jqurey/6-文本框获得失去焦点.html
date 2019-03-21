@@ -7,16 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
+    <style>
+        .color{
+            background: #00ffff;
+            outline: none;     /* 去掉外面那层默认的蓝色框 */
+        }
+    </style>
 <body>
     <span>姓名：</span>
     <input type="text" value="请输入姓名">
     <script src="jquery-1.12.4.js"></script>
     <script>
+         
         $('input').on('focus', function () {
+            $('input').addClass('color');
             if(this.value ==    this.defaultValue)
+           
             this.value = "";
+       
         }).on('blur', function () {
+            $('input').removeClass('color');
             if(this.value== '')
             this.value = this.defaultValue;
         })
