@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+    #div1{
+        width: 200px;
+        height: 200px;
+        background: #0ff;
+        text-align: center;
+        /* color: #ff0000 */
+    }
+    .aaa{
+        background: #ff0;
+        border: 10px solid #000;
+    }
+    </style>
+<body>
+    <script src="jquery-1.12.4.js"></script>
+    <div id="div1">jiayouchengxuyuan</div>
+    <script>
+    $('#div1').on('click',function(){
+        // $(this).css('background','#f0f');
+        $(this).toggleClass('aaa');//切换样式
+        $(this).css({
+            background : '#f0f',
+            width :400,
+            opacity:0.5
+
+        })
+
+    })
+
+
+    // $('#div1').css('background','#f0f')
+    
+    </script>
+</body>
+</html>
