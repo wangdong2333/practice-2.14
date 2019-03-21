@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style> 
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #div1{
+        width: 200px;
+        height: 200px;
+        background: #ffff00;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    #div2{
+        width: 100px;
+        height: 100px;
+        background: #00ffff;
+        position: absolute;
+        left:40px;
+        top:60px;
+    }
+    </style>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <script src="../jqurey/jquery-1.12.4.js"></script>
+    <script>
+    console.log($('#div1').offset());
+    console.log($('#div2').offset());
+    console.log($('#div2').position());
+    </script>
+</body>
+</html>
