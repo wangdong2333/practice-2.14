@@ -1,36 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #div1{
+        * {
+            touch-action: none;
+        }
+
+        #div1 {
             width: 200px;
             height: 200px;
             background: #ff0000;
         }
     </style>
 </head>
+
 <body>
     <div id="div1">
     </div>
     <script src="zepto.js"></script>
     <script src="touch.js"></script>
     <script>
-        $('#div1').on('click',function(){
-            console.log('div1 click');
-        })
+        // $('#div1').on('click',function(){
+        //     console.log('div1 click');
+        // })
 
-        $('#div1').on('tap',function(){
+
+        $('#div1').on('singleTap', function () {
+            console.log('singleTap')
+        })
+        $('#div1').on('tap', function () {
             console.log('div1 tap');
         })
+        $('#div1').on('doubleTap', function () {
+            console.log('doubleTap')
+        })
+        $('#div1').on('longTap',function(){
+            console.log('long tap');
+        })
+        // $('#div1').on('touchstart',function(){
+        //     console.log('touchstart');
+        // })
+        // $('#div1').on('touchmove',function(){
+        //     console.log('touchmove');
+        // })
+        // $('#div1').on('touchend',function(){
+        //     console.log('touchend');
+        // })
+        // $('#div1').on('touchcancel',function(){
+        //      console.log('touch cancel');
+        //  })
+        //  $("#div1").on('swipe',function(){
+        //     console.log('swipe');
+        //  });
+        //   $("#div1").on('swipeLeft',function(){
+        //     console.log('swipe left');
+        // });
+        // $("#div1").on('swipeUp',function(){
+        //     console.log('swipe up');
+        // });
+
+        // $("#div1").on('swipeRight',function(){
+        //     console.log('swipe right');
+        // });
+        // $("#div1").on('swipeDown',function(){
+        //     console.log('swipe down');
+        // });
 
 
-
-        
     </script>
-    
+
 </body>
+
 </html>
