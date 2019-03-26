@@ -149,6 +149,14 @@
         transform:  scale(0);
     }
 }
+.moveFromRight{
+    animation: moveFromRight 0.6s ease forwards;
+}
+@keyframes moveFromRight{
+    0%{
+        transform: translateX(100%);
+    }
+}
 #container .page-2-7{
     height: auto;
     width: 20px;
@@ -156,6 +164,170 @@
     top: 87%;
     left: 50%;
     margin-left: -10px; 
+}
+#container .page-3{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background:#f3533c
+
+}
+#container .page-3-1{
+    height: auto;
+    width: 166px;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    margin-left: -86px;
+    z-index: 2;
+}
+#container .page-3-2{
+    height: auto;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -125px;
+}
+#container .page-3-3{
+    height: auto;
+    width: 172px;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    margin-left: -55px;
+}
+#container .page-3-4{
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    margin-left: -10px;
+}
+#container .page-3-5{
+    height: auto;
+    width: 142px;
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    margin-left: -71px;
+}
+#container .page-3-6{
+    height: auto;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    margin-left: -12px;
+}
+#container .page-3-7{
+    height: auto;
+    width: 248px;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    margin-left: -124px;
+}
+#container .page-4{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background:#ffbf50;
+
+}
+#container .page-4-1{
+    height: auto;
+    width: 162px;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    margin-left: -84px;
+}
+#container .page-4-2{
+    height: auto;
+    width: 230px;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    margin-left: -115px;
+}
+#container .page-4-3{
+    height: auto;
+    width: 161px;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    margin-left: -80px
+}
+#container .page-4-4{
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    margin-left: -10px
+}
+#container .page-4-5{
+    height: auto;
+    width: 142px;
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    margin-left: -71px;
+}
+#container .page-4-6{
+    height: auto;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    margin-left: -12px;
+}
+#container .page-4-7{
+    height: auto;
+    width: 271px;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    margin-left: -135px;
+}
+#container .page-4-8{
+    height: auto;
+    width: 169px;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    margin-left: -84px;
+}
+#container .page-5{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background:#083846;
+
+}
+#container .page-5-1{
+    height: auto;
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -140px;
+}
+#container .page-5-2{
+    height: auto;
+    width: 260px;
+    position: absolute;
+    left: 50%;
+    top: 67%;
+    margin-left: -130px;
 }
 
 /* js需求 */
