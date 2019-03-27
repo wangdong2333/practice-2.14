@@ -333,7 +333,7 @@
 /* js需求 */
 
 .moveToTop{
-    animation: moveToTop 1s ease forwards;
+    animation: moveToTop 0.6s ease forwards;
 }
 @keyframes moveToTop{
     100%{
