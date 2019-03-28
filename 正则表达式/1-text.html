@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        var reg1 = /a/;
+        var reg2 = new RegExp('a')
+        var str1 = 'sdfh';
+        console.log(reg1.exec('bbacd'));
+        console.log(reg2.exec(str1));
+        
+        var reg = /c\b/;
+        //\b在前面表示c是前边界，\b在后面表示c是后边界。空格也算边界
+        var str2 = 'qwertyc as'
+        console.log(reg.exec(str2));
+    </script>
+</body>
+</html>
