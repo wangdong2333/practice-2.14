@@ -22,31 +22,24 @@
         //     aLi[i].style.background = 'red';
         // }
 
-        
-        function getEleByClassName(clsName){
+        function getElementsByClassName(ClassName){
             var result = [];
             var allEle = document.getElementsByTagName('*');
-            for(var i=0; i<allEle.length; i++){
-                // 如果元素的class名 == 参数clsName
-                // "aa bb" == "aa"
-                // /\b/   '\b'
-                // new RegExp('a')
-                // clsName 前后都是边界
-                var reg = new RegExp('\\b'+clsName+'\\b');
-                var str = allEle[i].className;
-                if(reg.test(str)){ //reg匹配str 返回true 否则返回false  
+            for(var i = 0; i<allEle.length; i++){
+                var reg = new RegExp('\\b'+ClassName+'\\b')
+                if(reg.test(allEle[i].className) ){
                     result.push(allEle[i]);
                 }
             }
             return result;
         }
-
-        var aLi = getEleByClassName('aa');
-        for(var i=0; i<aLi.length; i++){
-            aLi[i].style.background = 'red';
+        
+        var aLi = getElementsByClassName('aa');
+        for(var j = 0; j<aLi.length; j++){
+           aLi[j].style.background = 'pink';
         }
-
-
+       
+       
 
         
     </script>
