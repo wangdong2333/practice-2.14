@@ -26,6 +26,7 @@ var iNow = 1;
                 $('.page-'+(iNow-1)).children().removeClass('hide');
                 // 下滑的时候 让出去的小图都隐藏
                 $('.page-'+iNow).children().addClass('hide');
+                // $('.page-'+iNow).addClass('hide');
                 iNow--;
             }, 600);
         }
