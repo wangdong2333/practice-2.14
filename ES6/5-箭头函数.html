@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">hahaha</div>
+    <script>
+    var oDiv = document.getElementById('div1');
+    // let fn = function(){
+
+    // }
+    // let fn  = () => {
+
+    // }
+    // oDiv.onclick = () => {
+    //     setTimeout(() => {
+    //         console.log(this);
+    //     })
+    // }
+
+    var xx = 1;
+    obj = {
+        name :'zs',
+        age :20,
+        say:() => {
+            setTimeout(() => {
+                console.log(this.xx);
+            },1000);
+        }
+    }
+    obj.say();
+    var xx = 1;
+    obj = {
+        name :'zs',
+        age :20,
+        xx:2,
+        say:function() {
+
+            setTimeout(() => {
+                console.log(this.xx);
+            },1000);
+        }
+    }
+    obj.say();
+  
+    </script>
+</body>
+</html>
