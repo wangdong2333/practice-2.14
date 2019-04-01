@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es5
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        
+        Person.prototype.say = function(){
+            console.log('saying');
+        }
+
+        var p1 = new Person('zs',28);
+        console.log(p1);
+        p1.say();
+
+        function Coder(name,age){
+            Person.call(this,name,age);
+        }
+        var c1 = new Coder('lisi',19);
+        console.log(c1);
+      
+        // var c2 = new Coder('liuyu',21);
+        // console.log(c2);
+
+        Coder.prototype = new Person();
+        Coder.prototype.constructor = Coder;
+          c1.say();
+
+    </script>
+</body>
+</html>
