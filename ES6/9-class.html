@@ -34,11 +34,14 @@
             sleep(){
                 console.log('sleeping');
             }
+            static good(){
+                console.log('perfect');
+            }
         }
         var c1 = new Coder('zhangsan',21,'coding');
         console.log(c1);
         c1.sleep();
-
+        Coder.good();
         
     </script>
 </body>
