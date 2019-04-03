@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name,age,hobby){
+                this.name = name;
+                this.age = age;
+                this.hobby = hobby;
+            }
+            say(){
+                console.log('hello');
+            }
+            eat(){
+                console.log('delicious');
+            }
+        }
+        var p1 = new Person('lisi',20);
+        console.log(p1);
+        p1.say();
+        p1.eat();
+        
+        class Coder extends Person {
+            constructor(name,age,hobby){
+                super(name,age,hobby);
+                this.hair = 'vary exuberant';
+            }
+            sleep(){
+                console.log('sleeping');
+            }
+        }
+        var c1 = new Coder('zhangsan',21,'coding');
+        console.log(c1);
+        c1.sleep();
+
+        
+    </script>
+</body>
+</html>
