@@ -15,7 +15,7 @@
         }
         
         Person.prototype.say = function(){
-            console.log('saying');
+            console.log(this.name +" say")
         }
 
         var p1 = new Person('zs',28);
@@ -25,14 +25,15 @@
         function Coder(name,age){
             Person.call(this,name,age);
         }
-        var c1 = new Coder('lisi',19);
-        console.log(c1);
-      
+       
         // var c2 = new Coder('liuyu',21);
         // console.log(c2);
 
         Coder.prototype = new Person();
         Coder.prototype.constructor = Coder;
+        var c1 = new Coder('lisi',19);
+        console.log(c1);
+      
           c1.say();
 
     </script>
