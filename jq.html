@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="" onsubmit="return check_submit();">
+                用户名<br>
+                <input id="text_user_name"><br>
+                密码<br>
+                <input id="text_user_pass" type="password"><br>
+                确认密码<br>
+                <input id="text_user_pass_confirm" type="password"><br>
+                <input type="submit" value="确认">
+                </form>
+                <script>
+                var userName = document.getElementById('text_user_name');
+                var userPass = document.getElementById('text_user_pass');
+                var userPassConfirm = document.getElementById('text_user_pass_confirm');
+                
+                userName.onclick = function(){
+                if(userName.value == ''){
+                alert("请填写用户名"); 
+                } 
+                }
+                userPass.onclick = function(){ 
+                alert("请填写密码"); 
+                }
+                userPassConfirm.onclick = function(){ 
+                alert('请确认密码'); 
+                }
+                </script>
+</body>
+</html>
