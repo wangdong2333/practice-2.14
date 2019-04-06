@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-       //解决 回调地狱
-       var p1 = new Promise(
-           function(resolve,reject){
-                setTimeout(function(){
+        //解决 回调地狱
+        //    var p1 = new Promise(
+        //        function(resolve,reject){
+        //             setTimeout(function(){
+        //                 console.log('请求1成功');
+        //                 // resolve();
+        //                 reject();
+        //             },1000)
+        //        }
+        //    ).then(function(){
+        //         console.log('将要第二次请求');
+        //         setTimeout( () =>{
+        //             console.log('请求2成功');
+        //         },2000)
+        //    },function(){
+        //        console.log('失败');
+        //    }) 
+        var p1 = new Promise(
+            function (resolve, reject) {
+                setTimeout(function () {
                     console.log('请求1成功');
                     // resolve();
                     reject();
-                },1000)
-           }
-       ).then(function(){
-            console.log('将要第二次请求');
-            setTimeout( () =>{
-                console.log('请求2成功');
-            },2000)
-       },function(){
-           console.log('失败');
-       }) 
-        
-        
+                }, 1000)
+            }
+        ).then(function(){
+            return new Promise(
+                function (resolve, reject) {
+                    console.log('将要第二次请求');
+                    setTimeout(() => {
+                        console.log('请求2成功');
+                    }, 2000)
+                })
+
+     
+           
+
+
     </script>
 </body>
+
 </html>
