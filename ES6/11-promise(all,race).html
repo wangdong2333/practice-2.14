@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log('请求1  ok');
+                resolve();
+            },1000)
+        });
+        let p2 = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log('请求2  ok');
+               resolve();
+            },2000)
+        })
+        let p3 = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log('请求3  ok');
+               reject();
+            },500)
+        })
+        
+        // Promise.all([p1,p2,p3]).then(function(){
+        //     console.log('okokok');
+        // }).catch(function(){
+        //     console.log('失败');
+        // })
+
+        Promise.race([p1,p2,p3]).then(function(){
+            console.log('okok');
+        },function(){
+            console.log('失败失败');
+        })
+
+
+    
+    
+    </script>
+</body>
+</html>
