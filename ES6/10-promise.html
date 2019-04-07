@@ -27,23 +27,32 @@
         //    },function(){
         //        console.log('失败');
         //    }) 
+
         var p1 = new Promise(
             function (resolve, reject) {
                 setTimeout(function () {
                     console.log('请求1成功');
-                    // resolve();
-                    reject();
+                   
+                    var  id= 8;
+                     resolve(id);
+                    // reject();
                 }, 1000)
             }
-        ).then(function(){
-            return new Promise(
-                function (resolve, reject) {
-                    console.log('将要第二次请求');
-                    setTimeout(() => {
-                        console.log('请求2成功');
-                    }, 2000)
-                })
-
+        ).then(function(id){
+            console.log(id);
+            return new Promise(function(resolve,reject){
+                console.log('可以开始请求2')
+                setTimeout(() => {
+                    console.log('请求2成功');
+                    resolve();
+                }, 2000);              
+            })
+        },function(){
+            console.log('失败');
+        }).then(function(){
+            console.log('可以开始第三个请求');
+        });
+        
      
            
 
