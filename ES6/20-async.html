@@ -11,7 +11,9 @@
         async function fn(){
             console.log('开始');
             await req1();
-            console.log('请求1 成功  可以开始请求2');
+            console.log('可以开始请求2');
+            await req2();
+            console.log('请求完毕');
         }
         fn();
         async function req1(){
@@ -22,6 +24,15 @@
                 },1000)
 
             })
+        }
+        async function req2(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                console.log('请求2成功');
+                resolve();
+            },2000)
+            })
+            
         }
     
     </script>
