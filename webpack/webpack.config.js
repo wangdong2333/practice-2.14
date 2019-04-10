@@ -35,6 +35,18 @@ module.exports = {
                     fallback:'style-loader',
                     use: 'css-loader'
                 })
+            },  {
+                test:/\.(jpg|png|gif)$/,
+                use:[{
+                    loader:'url-loader',
+                    options:{
+                        limit:500,
+                        outputPath:'images/'
+                    }
+                }]
+            },{
+                test:/\.(htm|html)$/i,
+                loader:'html-withimg-loader'
             }
         ]
     }
