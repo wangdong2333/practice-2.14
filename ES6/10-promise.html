@@ -31,8 +31,7 @@
         var p1 = new Promise(
             function (resolve, reject) {
                 setTimeout(function () {
-                    console.log('请求1成功');
-                   
+                    console.log('请求1成功');                   
                     var  id= 8;
                      resolve(id);
                     // reject();
@@ -51,8 +50,8 @@
             console.log('失败');
         }).then(function(){
             console.log('可以开始第三个请求');
-        },fuction(){
-            
+        },function(){
+            console.log('/////');
         });
         
      
