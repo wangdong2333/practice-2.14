@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-        <form action="" onsubmit="return check_submit();">
-                用户名<br>
-                <input id="text_user_name"><br>
-                密码<br>
-                <input id="text_user_pass" type="password"><br>
-                确认密码<br>
-                <input id="text_user_pass_confirm" type="password"><br>
-                <input type="submit" value="确认">
-                </form>
-                <script>
-                var userName = document.getElementById('text_user_name');
-                var userPass = document.getElementById('text_user_pass');
-                var userPassConfirm = document.getElementById('text_user_pass_confirm');
-                
-                userName.onclick = function(){
-                if(userName.value == ''){
-                alert("请填写用户名"); 
-                } 
+
+    <script>
+        window.onload = function () {
+            var pro = ["广西", "广州", "上海", "北京", "江西"],
+                ci = [
+                    ["桂林", "柳州", "南宁", "钦州"],
+                  ["湛江", "东莞", "株洲"],
+                    ["浦西", "浦东"],
+                   ["五道口"],
+                    ["南京", "万峰", "太岳"]
+                ];
+            function createProvince() {
+                var province = document.getElementById("province");
+                for (var i in pro) {
+                  var op = new Option(pro[i]);
+                    province.options.add(op);
                 }
-                userPass.onclick = function(){ 
-                alert("请填写密码"); 
+            }
+            function createCity() {
+                var index = document.getElementById("province").selectedIndex;
+                var city = document.getElementById("city");
+                city.length = 0;
+                for (var i in ci[index]) {
+                    var op = new Option(ci[index][i]);
+                    city.options.add(op);
                 }
-                userPassConfirm.onclick = function(){ 
-                alert('请确认密码'); 
-                }
-                </script>
+            }
+      createProvince();
+            document.getElementById("province").onchange = createCity;
+        }
+    </script>
+    <select id="province"></select>
+    <select id="city"></select>
 </body>
+
 </html>
