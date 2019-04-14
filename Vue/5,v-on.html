@@ -7,6 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app">
+        <button v-on:click="clickhander(2)">点我加一</button>
+        <input type="number" v-model="num" @keyup.13="keyup">
+        <h1 v-text="count"></h1>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:"v-on",
+                count:0,
+                num : 0
+            },
+            methods:{
+                clickhander(n){
+                    this.count += n ;
+                },
+                keyup(){
+                    this.count +=parseInt(this.num) ;
+                }
+            }
+        })
     
+    </script>
 </body>
 </html>
