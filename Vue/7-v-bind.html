@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .red{
+            background: #ff0000;
+        }
+    </style>
+<body>
+    <div id="app">
+        {{ msg }}
+        <img v-bind:src="imgUrl" alt="">
+        <button @click="toggle">toggle</button>
+        <div :class="{red:isRed}">程序员</div>
+        <div :style="classObject">666</div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:'v-bind',
+                imgUrl:'https://cn.vuejs.org/images/logo.png',
+                isRed:false,
+                classObject:{
+                    background:'#0ff',
+                    'font-size':'30px',
+                }
+            },
+            methods:{
+                toggle(){
+                    this.isRed = !this.isRed;
+                }
+
+            }
+        })
+    
+    </script>
+</body>
+</html>
