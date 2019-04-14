@@ -1,27 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>v-for</title>
 </head>
+
 <body>
     <div id="app">
         {{msg}}
+
+        <div v-for="(item,index) in arr ">
+                {{ item }}  {{index}}
+            </div>
+
+        <div v-for="user in listSort">
+            {{ user.name }}  {{ user.age }}
+            <button @click="showName(user)"> showName </button>
+        </div>
+
+        <div>{{ dog }}</div>
+
+        <div v-for="(item,key) in dog">
+            {{ item }}  {{ key }}
+        </div>
+
     </div>
-    
+  
+    <script src=" ./vue.js"> </script> <script>
 
-    <script src="./vue.js"></script>
-    <script>
         new Vue({
-            el:'#app',
-            data:{
-                msg:'v-for',
-
+            el: '#app',
+            data: {
+                msg: 'v-for',
+                arr: ['a', 'b', 'c', 'd'],
+                list:[
+                    {
+                        name:'zhangsan',
+                        age:18
+                    },
+                    {
+                        name:'lisi',
+                        age:62,
+                    },
+                    {
+                        name:"wangwu",
+                        age:50
+                    }
+                ],
+                dog:{
+                    name:'haiwang',
+                    age:'23'
+                    },
+               
+            },
+            computed: {
+                listSort(){
+                    return this.list.sort(function(a,b){
+                        return a.age - b.age;
+                    });
+                }
+            },
+            methods: {
+                    showName(obj){
+                        console.log(obj);
+                    }
             }
+              
         })
-    
+
     </script>
 </body>
+
 </html>
