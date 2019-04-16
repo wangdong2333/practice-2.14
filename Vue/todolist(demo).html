@@ -23,7 +23,7 @@
         list-style: none;
         height: 50px;
         line-height: 50px;
-        background: #ccc;
+        background: rgb(238, 232, 232);
         margin-bottom: 5px; 
         padding: 0 50px;
     }
@@ -41,7 +41,12 @@
         float: left;
         padding-top:5px  ;
     }
-    
+    span{
+        float: right;
+    }
+    h3{
+        padding: 0 50px;
+    }
 </style>
 
 <body>
@@ -67,7 +72,9 @@
             </li>
         </ul>
         <hr>
-        <h3>总价是：{{ total }}</h3>
+        <h3><button>删除全选</button>
+            <span>总价是：{{ total }}</span>
+            </h3>
     </div>
 
 
@@ -131,6 +138,8 @@
                         price:this.price1*1,
                         isRed:false,
                     });
+                    this.name1 = '',
+                    this.price1 = ''
                 },
                 search(){
                     var arr = this.prolist.filter((obj,index) => {
