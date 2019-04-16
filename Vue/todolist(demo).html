@@ -41,12 +41,24 @@
         float: left;
         padding-top:5px  ;
     }
+    
 </style>
 
 <body>
     <h1>todolist</h1>
     <div id="app">
         <ul>
+            <p>
+                搜索商品：<input type="text" v-model="msg">
+                <button @click="search()">搜索</button>
+            </p>
+            <p>
+                    商品名称：<input type="text" v-model="name1"> 
+                    商品价格：<input type="text" v-model="price1">
+                    <button @click="add()">添加</button>
+            </p>
+           
+          
             <li v-for="(obj,index) in prolist" :class="{red:obj.isRed}"  @click="toggle(obj)">
                 {{obj.name}}
                 <span class="checkbox"><input type="checkbox"></span>
@@ -90,10 +102,14 @@
                         name:'鞋',
                         price:parseInt('317'),
                         isRed: false,
-                    }
+                    },
+                   
 
                 ],
                 total:0,
+                name1:'',
+                price1:'',
+                msg:""
 
                 
             },
@@ -108,7 +124,23 @@
                 },
                 dele(index){
                   this.prolist.splice(index,1);
+                },
+                add(){
+                    this.prolist.push({
+                        name:this.name1,
+                        price:this.price1*1,
+                        isRed:false,
+                    });
+                },
+                search(){
+                    var arr = this.prolist.filter((obj,index) => {
+                        console.log(obj,index);
+                        return obj.name.includes(this.msg);
+                    })
+                    console.log(arr);
+                    this.prolist = arr;                 
                 }
+
             },
         })
 
