@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        <p>
+        <button @click="change()">change</button>
+        </p>
+        <div v-for="val in arr">{{ val }}</div>
+        <!-- h2计算数组中的所有结果 -->
+        <h2>
+            {{ total() }}
+            {{ sum }}
+        </h2>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:'set:',
+                arr:[1,2,3,4]
+            },
+            methods:{
+                change(){
+                    Vue.set(this.arr,1,666);
+                },
+                total(){
+                    count = 0;
+                    this.arr.forEach((val) => {
+                        count += val;
+                    });
+                    return count ;
+                }
+            },
+            computed:{
+                //sum 为一个属性（在computed里面写的和方法一样）
+                sum(){
+                    count = 0;
+                    this.arr.forEach((val) => {
+                        count += val;
+                    });
+                    return count ;
+                }
+            }
+        })
+    
+    </script>
+</body>
+</html>
