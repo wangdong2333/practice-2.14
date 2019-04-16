@@ -66,13 +66,13 @@
           
             <li v-for="(obj,index) in prolist" :class="{red:obj.isRed}"  @click="toggle(obj)">
                 {{obj.name}}
-                <span class="checkbox"><input type="checkbox"></span>
+                <span class="checkbox"><input type="checkbox" v-model="obj.isRed"></span>
                 <span>{{ obj.price }}</span>
                 <span class="del" @click="dele(index)"><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></span>
             </li>
         </ul>
         <hr>
-        <h3><button>删除全选</button>
+        <h3><button @click="deleteAll()">删除全选</button>
             <span>总价是：{{ total }}</span>
             </h3>
     </div>
@@ -113,12 +113,39 @@
                    
 
                 ],
+                showList:[
+                    {
+                        name:'衣服',
+                        price:'256'*1,
+                        isRed: false,
+                    },
+                    {
+                        name:'裤子',
+                        price:'199'*1,
+                        isRed: false,
+                    },
+                    {
+                        name:'手机',
+                        price:parseInt('299'),
+                        isRed: false,
+                    },
+                    {
+                        name:'钱包',
+                        price:parseInt('188'),
+                        isRed: false,
+                    },
+                    {
+                        name:'鞋',
+                        price:parseInt('317'),
+                        isRed: false,
+                    },
+                   
+
+                ],
                 total:0,
                 name1:'',
                 price1:'',
-                msg:""
-
-                
+                msg:"",
             },
             methods: {
                 toggle(obj) {
@@ -138,18 +165,30 @@
                         price:this.price1*1,
                         isRed:false,
                     });
-                    this.name1 = '',
-                    this.price1 = ''
+                    this.name1 = '';
+                    this.price1 = '';
                 },
                 search(){
                     var arr = this.prolist.filter((obj,index) => {
                         console.log(obj,index);
-                        return obj.name.includes(this.msg);
+                        
+                            return obj.name.includes(this.msg);
+                      
+                        
                     })
                     console.log(arr);
-                    this.prolist = arr;                 
-                }
+                    // this.prolist = arr;                 
 
+                    this.prolist = [...arr];                 
+                },
+                deleteAll(){
+                    var arr1 = this.prolist.filter(function(obj){
+                        return obj.isRed == false;
+                    });
+                    console.log(arr1);
+                    this.prolist = [...arr1];
+                }
+                
             },
         })
 
