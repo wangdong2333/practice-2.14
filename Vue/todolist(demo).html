@@ -54,12 +54,12 @@
     <div id="app">
         <ul>
             <p>
-                搜索商品：<input type="text" v-model="msg">
+                搜索商品：<input type="text" v-model="msg" placeholder="搜索">
                 <button @click="search()">搜索</button>
             </p>
             <p>
-                    商品名称：<input type="text" v-model="name1"> 
-                    商品价格：<input type="text" v-model="price1">
+                    商品名称：<input type="text" v-model="name1" placeholder="请输入商品名称"> 
+                    商品价格：<input type="text" v-model="price1" placeholder="请输入商品价格"> 
                     <button @click="add()">添加</button>
             </p>
            
@@ -68,7 +68,7 @@
                 {{obj.name}}
                 <span class="checkbox"><input type="checkbox" v-model="obj.isRed"></span>
                 <span>{{ obj.price }}</span>
-                <span class="del" @click="dele(index)"><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></span>
+                <span class="del" @click.stop="dele(index)"><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></span>
             </li>
         </ul>
         <hr>
@@ -81,7 +81,7 @@
     <script src="vue.js"></script>
 
     <script>
-        new Vue({
+        let vm = new Vue({
             el: '#app',
             data: {
                 prolist:[
@@ -111,7 +111,6 @@
                         isRed: false,
                     },
                    
-
                 ],
                 showList:[
                     {
@@ -150,6 +149,7 @@
             methods: {
                 toggle(obj) {
                     obj.isRed = !obj.isRed;
+
                     if(obj.isRed){
                         this.total += obj.price;
                     }else{
