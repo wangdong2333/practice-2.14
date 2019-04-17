@@ -54,7 +54,7 @@
     <div id="app">
         <ul>
             <p>
-                搜索商品：<input type="text" v-model="msg" placeholder="搜索">
+                搜索商品：<input type="text" v-model="msg" placeholder="搜索"  @focus="onblur">
                 <button @click="search()">搜索</button>
             </p>
             <p>
@@ -172,18 +172,28 @@
                     var arr = this.prolist.filter((obj,index) => {
                         console.log(obj,index);
                         
-                            return obj.name.includes(this.msg);
+                        return obj.name.includes(this.msg);
                       
                         
                     })
                     console.log(arr);
                     // this.prolist = arr;                 
 
-                    this.prolist = [...arr];                 
+                    this.prolist = [...arr]; 
+
+                   
+
+                },
+                onblur(){
+                    console.log(111)
+                    if(this.msg == "") {
+                        this.prolist = [...this.showList];
+                    } 
                 },
                 deleteAll(){
                     var arr1 = this.prolist.filter(function(obj){
                         return obj.isRed == false;
+                        // return !obj.isRed;
                     });
                     console.log(arr1);
                     this.prolist = [...arr1];
