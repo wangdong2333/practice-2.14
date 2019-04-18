@@ -38,31 +38,75 @@
     <div id="app">
         {{ msg }}
 
-        <h1>外加服务费 <input type="checkbox"></h1>
-        <ul >
-            <li>电视：<input type="checkbox"></li>
-            <li>沙发：<input type="checkbox"></li>
-            <li>洗衣机：<input type="checkbox"></li>
+        <h1>外加服务费 <input type="checkbox" v-model="isCheck" v-on:click="clear"></h1>
+        <ul v-if="isCheck">
+            <li v-for="obj in orderList ">
+                {{ obj.name }}  {{ obj.price }}
+                <input type="checkbox" v-model="fixedList" :value="obj">
+            </li>
+           
         </ul>
 
         <h1>订单详细信息:</h1>
         <ul>
-            <li>学府宾馆豪华型200</li>
+            <li v-for="obj in fixedList">
+                {{ obj.name }}  {{ obj.price }}
+            </liv-for>
         </ul>
-        <h2>总金额：{{ total }}</h2>
+        <h2>总金额：{{ total() }}</h2>
     </div>
         <script src="./vue.js"></script>
     <script>
         new Vue({
             el:'#app',
             data:{
-                msg:"Order"
+                msg:'Order',
+                orderList:[
+                    {
+                        name:'电视 :',
+                        price:'256'*1,
+                       
+                    },
+                    {
+                        name:'冰箱 :',
+                        price:'199'*1,
+                       
+                    },
+                    {
+                        name:'洗衣机 :',
+                        price:parseInt('299'),
+                      
+                    },
+                
+                   
+                ],
+                fixedList:[
+                    {
+                        name:'学府宾馆豪华型 :',
+                        price:'200'*1
+                    }
+                ],
+                
+                isCheck:false,
+                
             },
-            computed:{
-                total(){
-                    
+            methods:{
+                total(obj){
+                    var  count = 0;
+                    this.fixedList.forEach((obj) => {
+                       
+                        count += obj.price;
+                     
+                    });
+                    return count;
+                },
+                clear(){
+                    // this.fixedList.splice(1);
+                    this.fixedList = [this.fixedList[0]];
                 }
+                
             }
+           
         })
     </script>
 </body>
