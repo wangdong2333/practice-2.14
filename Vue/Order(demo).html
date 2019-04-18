@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 200px;
+            border: #000 solid 3px;
+        }
+        h1{
+            background: #1cbfe7;
+            color:#fff;
+            cursor: pointer;
+            width: 300px;
+            text-align: center;
+        };
+    
+
+        /* li{
+            list-style: none;
+            width: 200px;
+            height: 20px;
+            background: #f177c9;
+            text-align: center;
+            margin-left:50px; 
+        } */
+      
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+
+        <h1>外加服务费 <input type="checkbox"></h1>
+        <ul >
+            <li>电视：<input type="checkbox"></li>
+            <li>沙发：<input type="checkbox"></li>
+            <li>洗衣机：<input type="checkbox"></li>
+        </ul>
+
+        <h1>订单详细信息:</h1>
+        <ul>
+            <li>学府宾馆豪华型200</li>
+        </ul>
+        <h2>总金额：{{ total }}</h2>
+    </div>
+        <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:"Order"
+            },
+            computed:{
+                total(){
+                    
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
