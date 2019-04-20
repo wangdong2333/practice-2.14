@@ -8,14 +8,48 @@
 </head>
 <body>
     <div id="app">
+        {{ count }}
+        <button @click="count++">add</button>
         {{ msg }}
+        <button @click="fn()">destory</button>
     </div>
+  
     <script src="./vue.js"></script>
     <script>
-        new Vue({
+       let vm = new Vue({
             el:'#app',
             data:{
-                msg:"生命周期"
+                msg:"生命周期",
+                count:0
+            },
+            beforeCreate(){
+                console.log("beforeCreate",this.$el,this.$data);
+            },
+            created(){
+                console.log("created",this.$el,this.$data);
+            },
+            beforeMount(){
+                console.log("beforeMount",this.$el,this.$data);
+            },
+            mounted(){
+                console.log("mounted",this.$el,this.$data);
+            },
+            beforeUpdate() {
+                console.log("beforeUpdate");
+            },
+            updated() {
+                console.log("updated");
+            },
+            beforeDestroy() {
+                console.log("beforeDestroy");
+            },
+            destroyed() {
+                console.log("destroyed");
+            },
+            methods:{
+                fn(){
+                    vm.$destroy();
+                }
             }
         })
     </script>
