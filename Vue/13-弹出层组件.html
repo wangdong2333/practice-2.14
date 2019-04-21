@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .dialog {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            background: #cccccc;
+        }
+    </style>
+<body>
+    <div id="app">
+            <my-dialog title="登录" @close="fn">
+                <h1>内容。。。</h1>
+            </my-dialog>
+
+    </div>
+    <template id="dial">
+        <div class="dialog">
+            <div class="dialog-title">
+                <span>{{ title }}</span>
+                <span @click="$emit('close',title)">[X]</span>
+            </div>
+            <div class="dialog-content">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+
+            },
+            components :{
+                 "my-dialog": {
+                    template: "#dial",
+                    props: ["title"]
+                }
+            },
+            methods: {
+                fn(msg){
+                    console.log(msg)
+                }
+            },
+        })
+
+    </script>
+</body>
+</html>
