@@ -8,15 +8,36 @@
 </head>
 <body>
     <div id="app">
-        {{ msg }}
+        <demo name='hhhhh' age='10'>
+            <!-- 传内容在开始标签和结束标签只见传 -->
+            <h3 slot="slot1">slot1内容hhhhh</h3>
+            <p slot="slot2">slot2ssss</p>
+        </demo>
+        <demo name='iiiii' age='20'></demo>
     </div>
+
+    <template id="temp">
+        <!-- 组建的模板里面只能有一个根元素，所以用div给他们包上了 -->
+        <div> 
+            <slot name="slot1"></slot>
+            <h2>{{ name }}----{{ age }}</h2>
+      
+            <div>
+                <!-- slot为一个插槽用来传内容的（相当于一个站位的东西） -->
+                <slot name="slot2"></slot>
+            </div>
+        </div>
+       
+    </template>
     <script src="./vue.js"></script>
     <script>
-        new Vue({
+       var vm = new Vue({
             el:'#app',
-            data:{
-                msg:'组件2',
-                
+            components:{
+                "demo":{             //被调用的子组件
+                    template:"#temp",
+                    props:['name','age'] //父元素向子元素传参用props
+                }
             }
         })
 
