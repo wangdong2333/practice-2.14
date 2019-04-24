@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      
+
       <router-link to="/">Home</router-link> 
       <router-link to="/about">About</router-link>|
       <router-link to="/a">a页面</router-link>
+      <!-- <router-link to="/b">b页面</router-link> -->
+      <router-link :to="{name:'b',params:{name:'zs',id:123}}">b页面</router-link>
+      <router-link to="/c/666">c页面</router-link>
+
     </div>
     <router-view/>
   </div>

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import A from "./views/A.vue"
+import B from "./views/B.vue"
+import C from "./views/C.vue"
 import text1 from "./views/text1.vue"
 import text2 from "./views/text2.vue"
 
@@ -37,7 +39,18 @@ export default new Router({
           path:'/a/text2',
           component:text2
         }
+
       ]
+    },
+    {
+      path:'/b',
+      name:'b',
+      component:B
+    },
+    {
+      path:'/c/:id',
+      name:'c',
+      component:C
     }
   ]
 })
