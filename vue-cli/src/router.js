@@ -51,6 +51,13 @@ export default new Router({
       path:'/c/:id',
       name:'c',
       component:C
+    },
+    //别名
+    {
+      path:'/a',
+      component:A,
+      name:'a',
+      alias:'/alias'
     }
   ]
 })

@@ -8,9 +8,15 @@
       <!-- <router-link to="/b">b页面</router-link> -->
       <router-link :to="{name:'b',params:{name:'zs',id:123}}">b页面</router-link>
       <router-link to="/c/666">c页面</router-link>
+      <router-link to="/alias">别名alias</router-link>
 
+      
     </div>
+
+    <transition name='fade'>
     <router-view/>
+    </transition>
+    
   </div>
 </template>
 
@@ -34,4 +40,15 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+
+    .fade-enter{
+      opacity: 0;
+    }
+    .fade-enter-active{
+      transition: opacity  2s  ease;
+    }
+    .fade-enter-to{
+      opacity:1;
+    }
 </style>
