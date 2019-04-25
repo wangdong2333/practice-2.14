@@ -6,6 +6,8 @@ import B from "./views/B.vue"
 import C from "./views/C.vue"
 import text1 from "./views/text1.vue"
 import text2 from "./views/text2.vue"
+import count from "./views/count.vue"
+
 
 Vue.use(Router)
 
@@ -47,10 +49,16 @@ export default new Router({
       name:'b',
       component:B
     },
+    // {
+    //   path:'/c/:id',
+    //   name:'c',
+    //   component:C
+    // },
     {
       path:'/c/:id',
       name:'c',
-      component:C
+      component:C,
+      redirect:'/',
     },
     //别名
     {
@@ -58,6 +66,10 @@ export default new Router({
       component:A,
       name:'a',
       alias:'/alias'
+    },
+    {
+      path:'/count',
+      component:count
     }
   ]
 })
