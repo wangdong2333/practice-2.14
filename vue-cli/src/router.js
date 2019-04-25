@@ -7,12 +7,12 @@ import C from "./views/C.vue"
 import text1 from "./views/text1.vue"
 import text2 from "./views/text2.vue"
 import count from "./views/count.vue"
-
+import Error from "./views/Error.vue";
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -70,6 +70,10 @@ export default new Router({
     {
       path:'/count',
       component:count
+    },
+    {
+      path:'*',
+      component:Error
     }
   ]
 })
