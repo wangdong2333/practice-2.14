@@ -7,7 +7,9 @@ import C from "./views/C.vue"
 import text1 from "./views/text1.vue"
 import text2 from "./views/text2.vue"
 import count from "./views/count.vue"
-import Error from "./views/Error.vue";
+import Error from "./views/Error.vue"
+import Count from "./views/count.vue"
+
 
 Vue.use(Router)
 
@@ -74,6 +76,7 @@ export default new Router({
     {
       path:'*',
       component:Error
-    }
+    },
+   
   ]
 })

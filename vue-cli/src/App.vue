@@ -9,7 +9,7 @@
       <router-link :to="{name:'b',params:{name:'zs',id:123}}">b页面</router-link>
       <router-link to="/c/666">c页面</router-link>
       <router-link to="/alias">别名alias</router-link>
-      <router-link to="count">count</router-link>
+      <router-link to="/count">count</router-link>
       
     </div>
 
