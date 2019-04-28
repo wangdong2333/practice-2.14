@@ -2,10 +2,19 @@
     <div>
         <div class="footer">
             <ul class="footer-list">
-                <li>电影</li>
-                <li>音乐</li>
-                <li>图书</li>
-                <li>图片</li>
+                <li>
+                    <router-link to="/movie">电影</router-link>                    
+                </li>
+                <li>
+                    <router-link to="/music">音乐</router-link>                    
+                </li>
+                <li>
+                    <router-link to="/book">图书</router-link>                    
+                </li>
+                <li>
+                    <router-link to="/photo">图片</router-link>                    
+                </li>
+                
             </ul>
         </div>
     </div>
@@ -32,5 +41,13 @@
     .footer-list li{
         flex: 1;
         text-align: center;
+    }
+    .footer-list a{
+        color: #000;
+        /* 把点击时候的虚框弄没 */
+        outline:none;
+    }
+    .footer-list a.router-link-active{
+        color:aliceblue;
     }
 </style>

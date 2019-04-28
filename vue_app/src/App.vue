@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <common-header></common-header>   
+    <div id="content">
+       <router-view></router-view>
+    </div>
+   
     <common-footer></common-footer>
   </div>
 </template>
@@ -11,11 +15,13 @@
   export default {
       components: {
         CommonHeader,
-        CommonFooter
+        CommonFooter,
       }
   }
 </script>
 
 <style  scoped>
-
+  #content{
+    margin: 1rem 0;
+  }
 </style>
