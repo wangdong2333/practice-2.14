@@ -11,34 +11,39 @@
 <body>
 
     <script>
-        window.onload = function () {
-            var pro = ["广西", "广州", "上海", "北京", "江西"],
-                ci = [
-                    ["桂林", "柳州", "南宁", "钦州"],
-                  ["湛江", "东莞", "株洲"],
-                    ["浦西", "浦东"],
-                   ["五道口"],
-                    ["南京", "万峰", "太岳"]
-                ];
-            function createProvince() {
-                var province = document.getElementById("province");
-                for (var i in pro) {
-                  var op = new Option(pro[i]);
-                    province.options.add(op);
-                }
-            }
-            function createCity() {
-                var index = document.getElementById("province").selectedIndex;
-                var city = document.getElementById("city");
-                city.length = 0;
-                for (var i in ci[index]) {
-                    var op = new Option(ci[index][i]);
-                    city.options.add(op);
-                }
-            }
-      createProvince();
-            document.getElementById("province").onchange = createCity;
-        }
+    //     window.onload = function () {
+    //         var pro = ["广西", "广州", "上海", "北京", "江西"],
+    //             ci = [
+    //                 ["桂林", "柳州", "南宁", "钦州"],
+    //               ["湛江", "东莞", "株洲"],
+    //                 ["浦西", "浦东"],
+    //                ["五道口"],
+    //                 ["南京", "万峰", "太岳"]
+    //             ];
+    //         function createProvince() {
+    //             var province = document.getElementById("province");
+    //             for (var i in pro) {
+    //               var op = new Option(pro[i]);
+    //                 province.options.add(op);
+    //             }
+    //         }
+    //         function createCity() {
+    //             var index = document.getElementById("province").selectedIndex;
+    //             var city = document.getElementById("city");
+    //             city.length = 0;
+    //             for (var i in ci[index]) {
+    //                 var op = new Option(ci[index][i]);
+    //                 city.options.add(op);
+    //             }
+    //         }
+    //   createProvince();
+    //         document.getElementById("province").onchange = createCity;
+    //     }
+    var a = "aa";
+    var b = "bb";
+    a += b;
+    console.log(a);
+    
     </script>
     <select id="province"></select>
     <select id="city"></select>
