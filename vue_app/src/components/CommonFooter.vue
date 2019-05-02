@@ -1,20 +1,10 @@
 <template>
     <div>
-        <div class="footer">
-            <ul class="footer-list">
-                <li>
-                    <router-link to="/movie">电影</router-link>                    
+        <div class="footer" :style={background:selectMenu.background}>
+            <ul class="footer-list" >
+                <li v-for="(obj,index) in menu" :key="index" @click="$emit('change',index)">
+                    <router-link :to="obj.path">{{ obj.name }}</router-link>                    
                 </li>
-                <li>
-                    <router-link to="/music">音乐</router-link>                    
-                </li>
-                <li>
-                    <router-link to="/book">图书</router-link>                    
-                </li>
-                <li>
-                    <router-link to="/photo">图片</router-link>                    
-                </li>
-                
             </ul>
         </div>
     </div>
@@ -22,7 +12,7 @@
 
 <script>
     export default {
-        
+        props:["menu","selectMenu"]
     }
 </script>
 
