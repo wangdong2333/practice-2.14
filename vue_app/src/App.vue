@@ -54,6 +54,16 @@ export default {
       this.selectMenu = this.menu[index];
     }
   },
+
+  created() {
+      console.log(this.$route.path);
+    this.menu.forEach((obj,index) =>{
+          if(obj.path == this.$route.path){
+            this.selectMenu = obj;
+          }
+          
+    })
+  },
 };
 </script>
 
