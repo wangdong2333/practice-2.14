@@ -3,6 +3,7 @@
         count
         <!-- {{ $store.state.count }} -->
         {{ count }}
+        <button @click="fn(8)">+++</button>//通过下面的方法进行调用 
     </div>
 </template>
 
@@ -15,8 +16,12 @@
         //     }
         // },
         computed: 
-            mapState(['count'])
-        
+            mapState(['count']),
+        methods: {
+              fn(num){
+                this.$store.commit('add',num);
+            },
+        },
     }
 </script>
 
