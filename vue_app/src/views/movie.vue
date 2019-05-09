@@ -1,34 +1,48 @@
 <template>
   <div>
-    <ul >
-      <li class="movie-list">
-        <img class="movie-img" src="xx.jpg" alt>
+    <ul class="movie-container">
+      <li class="movie-list" v-for="(obj,index) in movieList" :key="index">
+        <img class="movie-img" :src="obj.images.medium" alt>
 
         <div class="movie-text">
-          <h4>复仇者联盟4：终极之战</h4>
-          <p>小罗伯特.唐尼/克里斯.埃文斯</p>
-          <p>590630人已观看</p>
+          <h4>{{ obj.title }}</h4>
+          <p>
+              <span v-for="(actor,index) in obj.casts" :key="index">{{ actor.name }} </span>
+          </p>
+          <p>{{ obj.collect_count}}人已观看</p>
           <p>年份：2019</p>
-          <span>动作/科幻/奇幻/</span>
+          <p>
+            <span v-for="(type,index) in obj.genres" :key="index">{{ type }} /</span>
+          </p>
+        
         </div>
       </li>
-      <li class="movie-list">
-        <img class="movie-img" src="xx.jpg" alt>
-
-        <div class="movie-text">
-          <h4>复仇者联盟4：终极之战</h4>
-          <p>小罗伯特.唐尼/克里斯.埃文斯</p>
-          <p>590630人已观看</p>
-          <p>年份：2019</p>
-          <span>动作/科幻/奇幻/</span>
-        </div>
-      </li>
+     
     </ul>
   </div>
 </template>
 
 <script>
-export default {};
+import axios from 'axios';
+export default {
+    
+    data(){
+        return {
+            movieList:[]
+        }
+    },
+    created() {
+        axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+'&count=10')
+        .then((result) => {
+            // console.log(result.data.subjects);
+            this.movieList = result.data.subjects;
+            console.log(this.movieList);
+        })
+    },
+    methods: {
+
+    },
+};
 </script>
 
 <style  scoped>
@@ -45,5 +59,8 @@ export default {};
     .movie-text{
         flex:1;
 
+    }
+    .movie-container{
+        padding: 0 10px;
     }
 </style>
