@@ -33,6 +33,7 @@ export default {
         return {
             movieList:[],
             isShow:true,
+            isBottom:false,
         }
     },
     created() {
@@ -42,7 +43,7 @@ export default {
           let clinetHeight = document.documentElement.clientHeight;//屏幕的高度
           let height = document.documentElement.scrollHeight;//数据总共的高度
           // console.log(scrollTop,clinetHeight,height);
-          if(scrollTop + clinetHeight == height){
+          if(scrollTop + clinetHeight == height && this.isBottom != true){
               // 加载下一屏
             this.isShow = true;
             this.getMovie();
@@ -57,6 +58,9 @@ export default {
             // console.log(result.data.subjects);
             this.isShow = false;
             this.movieList = [...this.movieList,...result.data.subjects];
+            if(this.movieList.length == result.data.tatal){
+              this.isBottom = true;
+            }
             console.log(this.movieList);
         })
         }
