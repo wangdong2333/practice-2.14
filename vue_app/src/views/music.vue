@@ -1,8 +1,7 @@
 <template>
     <div>
-        <img v-for="(obj,index) in musicList" :key="index" :src="obj.bg" alt="">
-        <img :src="obj.bg" v-for="(obj,index) in musicList" :key="index" @click="goList()"/>
-
+        <img :src="obj.bg" v-for="(obj,index) in musicList" :key="index" @click="golist()" />
+        
     </div>
 </template>
 
@@ -18,8 +17,14 @@
          created() {
             axios.get('/data/musiclist.json')
             .then((result)=>{
+                console.log(result.data.albums);
                 this.musicList = result.data.albums;
             })
+        },
+        methods: {
+            golist(){
+                this.$router.push('musiclist');
+            }
         },
     }
 </script>
