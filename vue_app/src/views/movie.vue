@@ -36,16 +36,30 @@ export default {
         }
     },
     created() {
-        axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+'&count=10')
-        .then((result) => {
-            // console.log(result.data.subjects);
-            this.isShow = false;
-            this.movieList = result.data.subjects;
-            console.log(this.movieList);
-        })
+        this.getMovie();
+        window.onscroll = () =>{
+          let scrollTop = document.documentElement.scrollTop;//滚动条距离顶部的距离
+          let clinetHeight = document.documentElement.clientHeight;//屏幕的高度
+          let height = document.documentElement.scrollHeight;//数据总共的高度
+          // console.log(scrollTop,clinetHeight,height);
+          if(scrollTop + clinetHeight == height){
+              // 加载下一屏
+            this.isShow = true;
+            this.getMovie();
+          }
+        }
+
     },
     methods: {
-
+        getMovie(){
+             axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+this.movieList.length+'&count=10')
+            .then((result) => {
+            // console.log(result.data.subjects);
+            this.isShow = false;
+            this.movieList = [...this.movieList,...result.data.subjects];
+            console.log(this.movieList);
+        })
+        }
     },
 };
 </script>
