@@ -19,6 +19,9 @@
       </li>
      
     </ul>
+    <div>
+      <img class="lading" src="@/assets/imgs/loading.gif" v-if="isShow" alt="">
+    </div>
   </div>
 </template>
 
@@ -28,13 +31,15 @@ export default {
     
     data(){
         return {
-            movieList:[]
+            movieList:[],
+            isShow:true,
         }
     },
     created() {
         axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+'&count=10')
         .then((result) => {
             // console.log(result.data.subjects);
+            this.isShow = false;
             this.movieList = result.data.subjects;
             console.log(this.movieList);
         })
@@ -62,5 +67,14 @@ export default {
     }
     .movie-container{
         padding: 0 10px;
+    }
+    .lading{
+      position: fixed;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      width: 1rem;
+      height: 1rem;
+      /* background: rgba(0,0,0,0.2); */
     }
 </style>
