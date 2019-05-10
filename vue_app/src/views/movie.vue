@@ -58,9 +58,10 @@ export default {
             // console.log(result.data.subjects);
             this.isShow = false;
             this.movieList = [...this.movieList,...result.data.subjects];
-            if(this.movieList.length == result.data.tatal){
-              this.isBottom = true;
-            }
+            console.log(this.movieList.length,result.data.tatal);
+            if(this.movieList.length == result.data.total){
+                this.isBottom = true;
+          }
             console.log(this.movieList);
         })
         }
