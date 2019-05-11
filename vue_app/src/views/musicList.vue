@@ -21,6 +21,7 @@
        components: {
            Aplayer
        },
+       
        created() {
            axios.get('/data/musicdata.json')
            .then((result)=>{

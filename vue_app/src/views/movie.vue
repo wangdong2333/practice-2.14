@@ -53,7 +53,8 @@ export default {
     },
     methods: {
         getMovie(){
-             axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+this.movieList.length+'&count=10')
+            axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start='+this.movieList.length+'&count=10')
+
             .then((result) => {
             // console.log(result.data.subjects);
             this.isShow = false;
