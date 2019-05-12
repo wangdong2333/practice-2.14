@@ -14,17 +14,22 @@
         <script src="react-dom.development.js"></script>
         <script src="browser.min.js"></script>
         <script type="text/babel">
-            const Hello = ()=> {
+            const Hello = (props)=> {
                 return(
                     <div>
                         <h1>一二三</h1>
                         <p>123</p>
+                        <h1>{ props.name }</h1>
+                        <p>{ props.content }</p>
+                        { props.children }
                     </div>
                 )
             }
             
             ReactDOM.render(
-                <Hello></Hello>,
+                <Hello name="标题" content="内容：阿萨德是法国皇室的分隔号">
+                    <h3>结束语:</h3>
+                </Hello>,
                 document.getElementById('app')
             )
         </script>
