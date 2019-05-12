@@ -1,6 +1,6 @@
 <template>
     <div>
-        详情
+    
         <!-- {{ $route.params.url}} -->
         <img :src=" url " alt="">
         <!-- {{ url }} -->
@@ -21,6 +21,6 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

@@ -29,6 +29,9 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    img{
+        width: 50%;
+        height: 100%;
+    }
 </style>
