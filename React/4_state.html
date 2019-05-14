@@ -20,6 +20,9 @@
                 this.state = {
                     num:0,
                 }
+                
+                //推荐在这改用this.add当中的this 
+                this.add = this.add.bind(this)
             }
 
             //自定义方法   里面的this为undefind
@@ -35,7 +38,7 @@
                 return(
                     <div>
                         <h1>{ this.state.num }</h1>
-                        <button onClick={this.add.bind(this)}>add</button>
+                        <button onClick={this.add}>add</button>
                     </div>
                 )
             }
