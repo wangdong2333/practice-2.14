@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>组件（第二种）</title>
 </head>
 <body>
         <div id="app">
@@ -14,7 +14,24 @@
         <script src="react-dom.development.js"></script>
         <script src="browser.min.js"></script>
         <script type="text/babel">
-            
+            class Hello extends React.Component{
+                constructor(params){
+                    super(params);
+                }
+                render(){
+                    return (
+                        <div>
+                            <h1>hahaha</h1>
+                            <p>xixixixi</p>
+                        </div>
+                    )
+                }
+            }
+            ReactDOM.render(
+                <Hello></Hello>,
+                document.getElementById('app')
+            )
+           
         </script>
       
 </body>

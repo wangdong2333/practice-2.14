@@ -21,14 +21,14 @@
                         <p>123</p>
                         <h1>{ props.name }</h1>
                         <p>{ props.content }</p>
-                        { props.children }
+                        { props.children }//接收下面传来的html解构
                     </div>
                 )
             }
             
             ReactDOM.render(
                 <Hello name="标题" content="内容：阿萨德是法国皇室的分隔号">
-                    <h3>结束语:</h3>
+                    <h3>结束语:</h3>//传html解构，在开始和结束标签中间传
                 </Hello>,
                 document.getElementById('app')
             )
