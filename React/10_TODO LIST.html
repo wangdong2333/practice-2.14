@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div id="app">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+
+    <script type="text/babel">
+
+        class Main extends React.Component{
+            constructor(prams){
+                super(prams)
+                this.state = {
+                
+                    arr:["吃饭","睡觉","打代码"]
+                }
+                this.addList = this.addList.bind(this)
+
+            }
+            addList(vaule){
+                let arr1 = {...this.state.arr};
+                this.arr1.push(vaule)
+                this.setState({
+                      arr:arr1
+                })
+                  
+                
+             
+            }
+            render(){
+                return(
+                    <div>
+                        <h1>Simple TODO LIST</h1>
+                        <A addList={this.addList}></A>
+
+                        <ul>
+                        {
+                            this.state.arr.map((item,index) =>{
+                                return <li key={index}>{ item }</li>
+                            })
+                        }
+                        </ul>
+                    </div>
+                )
+            }
+        }
+      
+        class A extends React.Component{
+            constructor(prams){
+                super(prams)
+            }
+            
+            render(){
+                return (
+                    <div>
+                      <input type="text" ref={input => this.xx = input }/>
+                    <button onClick={()=>{
+                            this.props.addList(this.xx.value);
+                        }} >add</button>
+                    </div>
+                )
+            }
+            
+        }
+
+        ReactDOM.render(
+            <Main></Main>,
+             
+            document.getElementById("app")
+        );
+    </script>
+     
+</body>
+</html>
