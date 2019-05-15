@@ -23,15 +23,14 @@
             }
             clickHandle(){
                 console.log(this.refs.name.value);
-                console.log(this.myinput.value)
+                console.log(this.xx.value)
             }
             render(){
                 return(
                     <div>
                         用户名：<input type="text" ref="name"/>
                         <br/>
-                        密码：<input type="password" ref={input => this.myinput = input} />
-
+                        密码：<input type="password" ref={input => this.xx = input} />
                         <button onClick={this.clickHandle}>Click</button> 
                        
                     </div>
