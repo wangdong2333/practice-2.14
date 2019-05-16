@@ -22,11 +22,39 @@
                 this.state = {
                     num:0,
                 }
+                this.add = this.add.bind(this);
+            }
+            add(x){
+                this.setState({
+                    // num : this.state.num+1,
+                    num : this.state.num + x,
+   
+
+                })
             }
             render(){
                 return(
                     <div>
-                        <h2>main组件</h2>
+                        <h2>main父组件 { this.state.num }</h2>
+                        <A add= {this.add}></A>
+                    </div>
+                )
+            }
+        }
+        class A extends React.Component{
+            constructor(prams){
+                super(prams)
+            }
+
+            render(){
+                return(
+                    <div>
+                        <p>子组件A</p>
+                        <button onClick={() =>{
+                            this.props.add(2)
+                        }}>add</button>
+                       
+
                     </div>
                 )
             }
