@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div id="app">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params){
+                super(params)
+                this.state = {
+                    list : ["吃饭","睡觉","打代码"]
+                }
+                this.addList = this.addList.bind(this)
+            }
+
+            addList(value){
+                // console.log(value)
+                let arr = [...this.state.list]
+                arr.push(value)
+                this.setState({
+                   list:arr
+                })
+                
+            }
+
+            render(){
+                return(
+                    <div>
+                    <h1>TO DO LIST</h1>
+                    <Add addList={ this.addList }></Add>
+                    <List list={this.state.list}></List>
+                    </div>
+                )
+                    
+                
+            }
+        } 
+        class Add extends React.Component{
+            render(){
+                   return(
+                       <div>
+                        <input type="text" ref={input=>this.myInput = input}/>
+                        <button onClick={() =>{
+                            this.props.addList(this.myInput.value);
+                            this.myInput.value = "";
+
+                        }}>Add</button>
+                       </div>
+
+                   )
+                
+            }
+        }
+        class List extends React.Component{
+            render(){
+                return(
+                <ul>
+                    {
+                        this.props.list.map((value,index) =>{
+                            return <li key={ index }>{ value }</li>
+                        })
+                    }
+                </ul>
+                )
+                
+                
+            }
+        }
+
+        ReactDOM.render(
+            <Main/>,
+             
+            document.getElementById("app")
+        );
+      
+    </script>
+     
+</body>
+</html>
