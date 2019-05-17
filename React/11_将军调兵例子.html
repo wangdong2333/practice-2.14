@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div id="app">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params){
+                super(params)
+                this.state={
+                    total:150,
+                    numA:80,
+                    numB:70,
+                }
+            }
+            render(){
+                return(
+                    <div>
+                        <h1>剩余士兵数量：{this.state.tatal}</h1>
+                        <Gen></Gen>
+                        <Gen></Gen>
+
+                    </div>
+                )
+            }
+        }
+        class Gen extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h4>A将军有士兵：80</h4>
+                        <input type="number"/ >
+                        <button>调兵</button>
+                    </div>
+
+                )
+
+            }
+        }
+        ReactDOM.render(
+            <Main/>,
+            document.getElementById("app")
+        );
+    </script>
+     
+</body>
+</html>
