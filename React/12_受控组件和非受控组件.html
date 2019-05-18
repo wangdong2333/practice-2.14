@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div id="app">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+
+    <script type="text/babel">
+        class MyCompoonent extends React.Component{
+            constructor(params){
+                super(params)
+                this.state = {
+                    pswd:"密码"
+                }
+                this.show = this.show.bind(this);
+                this.change = this.change.bind(this)
+
+            }
+            show(){
+                alert("用户名："+this.myInput.value+"密码："+this.state.pswd)
+
+            }
+            change(event){
+                this.setState({
+                    pswd:event.target.value
+                })
+            }
+            render(){
+                return(
+                    <div>
+                        
+                        用户名：<input type="text" ref={input => this.myInput = input}/>
+                        密码：<input type="password" onChange={this.change}/>
+                        <button onClick={this.show}>Click</button>
+                    </div>
+                )
+            }
+        }
+    
+        ReactDOM.render(
+            <MyCompoonent/>,
+            document.getElementById("app")
+        );
+    </script>
+     
+</body>
+</html>
