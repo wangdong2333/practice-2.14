@@ -28,19 +28,22 @@
 
             change(num,name){
                 console.log(num,name);
-                this.setState({
-                    total:this.state.total - num,
-                    ['num'+name]:this.state['num'+name] + parseInt(num)
-
+                if(num<=this.state.total){
+                this.setState({                  
+                        total:this.state.total - num,
+                        ['num'+name]:this.state['num'+name] + parseInt(num)
                 })
+                }else{
+                        alert('士兵数量不足')
+                    }
             }
 
             render(){
                 return(
                     <div>
                         <h1>剩余士兵数量：{this.state.total}</h1>
-                        <Gen name="将军A" num={this.state.numA}  change={this.change}></Gen>
-                        <Gen name="将军B" num={this.state.numB} change={this.change}></Gen>
+                        <Gen name="A" num={this.state.numA}  change={this.change}></Gen>
+                        <Gen name="B" num={this.state.numB} change={this.change}></Gen>
 
                     </div>
                 )
@@ -54,7 +57,9 @@
             }
 
             addSo(){
-                this.props.change(this.myInput.value,this.props.name)
+                this.props.change(this.myInput.value,this.props.name);
+                this.myInput.value = ""
+                
             }
             
             render(){
