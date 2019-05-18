@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .del{
+            background: #f00;
+            color: aliceblue  
+        }
+        /* .isRed{
+            background: #f00;
+        } */
+    </style>
+</head>
+<body>
+   <div id="app">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params){
+                super(params)
+                this.state = {
+                    list : ["吃饭","睡觉","打代码"]
+                }
+                this.addList = this.addList.bind(this)
+            }
+
+            addList(value){
+                // console.log(value)
+                let arr = [...this.state.list]
+                arr.push(value)
+                this.setState({
+                   list:arr
+                })
+                
+            }
+            delList(value){
+                this.state.list.splice(value,1);
+            }
+            render(){
+                return(
+                    <div>
+                    <h1>TO DO LIST</h1>
+                    <Add addList={ this.addList }></Add>
+                    <List list={this.state.list} delList={this.delList}></List>
+                    </div>
+                )
+                    
+                
+            }
+        } 
+        class Add extends React.Component{
+            render(){
+                   return(
+                       <div>
+                        搜索：<input type="text"/> <br/>
+                        添加：<input type="text" ref={input=>this.myInput = input}/>
+                        <button onClick={() =>{
+                            this.props.addList(this.myInput.value);
+                            this.myInput.value = "";
+
+                        }}>Add</button>
+                       </div>
+
+                   )
+                
+            }
+        }
+        class List extends React.Component{
+            constructor(params){
+                super(params)
+                this.dele = this.dele.bind(this)
+            }
+            dele(event){
+
+                this.props.delList(event.target)
+            }
+            render(){
+                return(
+                <ul>
+                    {
+                        this.props.list.map((value,index) =>{
+                            return <li key={ index } className="isRed">
+                                <input type="checkbox"/>{value}
+                                <button className="del" onClick={this.dele}>删除</button>
+                            </li>
+                        })
+                    }
+                </ul>
+                )
+                
+                
+            }
+        }
+
+        ReactDOM.render(
+            <Main/>,
+             
+            document.getElementById("app")
+        );
+      
+    </script>
+     
+</body>
+</html>
