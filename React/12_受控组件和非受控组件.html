@@ -38,8 +38,8 @@
                 return(
                     <div>
                         
-                        用户名：<input type="text" ref={input => this.myInput = input}/>
-                        密码：<input type="password" onChange={this.change}/>
+                        用户名(非受控)：<input type="text" ref={input => this.myInput = input}/>
+                        密码(受控)：<input type="password" onChange={this.change}/>
                         <button onClick={this.show}>Click</button>
                     </div>
                 )
