@@ -6,11 +6,13 @@ import {
   Switch,
   Redirect,
   Prompt,
+  NavLink,
 } from 'react-router-dom'
 import A from "./components/A"
 import B from "./components/B"
 import Home from "./components/Home"
 import Children from "./components/Chiidren"
+import './App.css'
 
 
 
@@ -19,18 +21,18 @@ function App() {
     <div className="App">
         <div>HAHA</div>
         <Router>
-        <Link to="/">首页</Link>
+        <NavLink exact to="/">首页</NavLink>
         ..........
-        <Link to="/a/5">A页面</Link>
+        <NavLink to="/a/5">A页面</NavLink>
         ..........
-        <Link to="/b">B页面</Link>
+        <NavLink to="/b">B页面</NavLink>
         .........
-        <Link to="/d">D页面</Link>
+        <NavLink to="/d">D页面</NavLink>
         .....
 
-        <Link to="/children">children页面</Link>
+        <NavLink to="/children">children页面</NavLink>
         .........
-        <Link to="/e">重定向</Link>
+        <NavLink to="/e">重定向</NavLink>
 
         
         {/* <Route exact path="/" component={Home}></Route>
