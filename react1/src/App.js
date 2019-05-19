@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Link,
   Route,
-  Switch
+  Switch,
+  Redirect,
 } from 'react-router-dom'
 import A from "./components/A"
 import B from "./components/B"
@@ -27,6 +28,8 @@ function App() {
         .....
 
         <Link to="/children">children页面</Link>
+        .........
+        <Link to="/e">重定向</Link>
 
         
         {/* <Route exact path="/" component={Home}></Route>
@@ -51,10 +54,13 @@ function App() {
             return <h1>render出来的页面</h1>
           }}></Route>
           <Route path="/children" children={(props) =>{
-            console.log(props.match)
-            return <h1>children</h1>            
+             let str = props.match?'1111':'0000';
+             console.log(str)
+             return <Children str={str}></Children>     
           }}></Route>
-
+          <Route path="/e" render={() =>{
+            return <Redirect to="/"></Redirect>
+          }}></Route>
 
 
         </Router>
