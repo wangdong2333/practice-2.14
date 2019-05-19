@@ -5,6 +5,9 @@ export default class Home extends Component {
     return (
       <div>
           home
+          <button onClick={() =>{
+              this.props.history.push('/b')
+          }}>跳转到B</button>
       </div>
     )
   }
