@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
   Redirect,
+  Prompt,
 } from 'react-router-dom'
 import A from "./components/A"
 import B from "./components/B"
