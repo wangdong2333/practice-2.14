@@ -61,6 +61,7 @@ function App() {
              console.log(str)
              return <Children str={str}></Children>     
           }}></Route>
+          
           <Route path="/e" render={() =>{
             return <Redirect to="/"></Redirect>
           }}></Route>
