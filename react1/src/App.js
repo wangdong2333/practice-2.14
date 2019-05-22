@@ -13,6 +13,8 @@ import B from "./components/B"
 import Home from "./components/Home"
 import Children from "./components/Chiidren"
 import './App.css'
+import store from './store';
+import add from './action'
 
 
 
@@ -20,6 +22,14 @@ function App() {
   return (
     <div className="App">
         <div>HAHA</div>
+        <button onClick={
+          ()=>{
+            console.log('我要修改num值');
+            // 通过store.dispatch触发action修改num 
+            store.dispatch(add());
+        }}>add</button>
+
+        <hr></hr>
         <Router>
         <NavLink exact to="/">首页</NavLink>
         ..........
