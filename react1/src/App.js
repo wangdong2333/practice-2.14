@@ -14,14 +14,16 @@ import Home from "./components/Home"
 import Children from "./components/Chiidren"
 import './App.css'
 import store from './store';
-import add from './action'
+import add from './action';
+import { connect } from 'react-redux';
 
 
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-        <div>HAHA</div>
+        <div>{ props.num }</div>
         <button onClick={
           ()=>{
             console.log('我要修改num值');
@@ -82,4 +84,10 @@ function App() {
   );
 }
 
-export default App;
+let mapStateToProps = (state) =>{
+  return {
+      num:state.num
+  }
+}
+
+export default connect(mapStateToProps)(App);
