@@ -12,7 +12,7 @@ import {
 
 import NavLeft from './component/NavLeft';
 import Header from './component/Header';
-
+import Home from './page/Home/index'
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           </Col>
           <Col span={20}  >
             <Header></Header>
+            <Home></Home>
           </Col>
       </Row>
      
