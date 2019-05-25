@@ -10,7 +10,9 @@ import {
 
 } from 'antd';
 
-import NavLeft from './component/NavLeft'
+import NavLeft from './component/NavLeft';
+import Header from './component/Header';
+
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
           <Col span={4} className="navleft" >
             <NavLeft></NavLeft>
           </Col>
-          <Col span={20}  >right</Col>
+          <Col span={20}  >
+            <Header></Header>
+          </Col>
       </Row>
      
     </div>
