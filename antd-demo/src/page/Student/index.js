@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class index extends Component {
+export default class Student extends Component {
     render() {
         return (
             <div>
-                footer
+                学生列表
             </div>
         )
     }

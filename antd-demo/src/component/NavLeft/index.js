@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Menu ,Icon} from 'antd';
+// import {Link} from 'react-router-dom'
 import menuList from './../../config/menuconfig'
 import './index.css';
+import {Link} from 'react-router-dom'
 
 const {SubMenu} = Menu;
 
@@ -10,14 +12,19 @@ export default class NavLeft extends Component {
         return menuList.map((elem)=>{
             if(elem.children){
                 return (
-                    <SubMenu key={elem.path} title={<span><Icon type={elem.icon}></Icon>{elem.title}</span>}>
-                        {this.creteMenu(elem.children)}
-                    </SubMenu>
+                    // <Link to="/addStu">
+                        <SubMenu key={elem.path} title={<span><Icon type={elem.icon}></Icon>{elem.title}</span>}>
+                            {this.creteMenu(elem.children)}
+                        </SubMenu>
+                    // </Link>
                 )
             }
             return (<Menu.Item key={elem.path}>
+                <Link to={elem.path}>
                 {elem.icon?<Icon type={elem.icon}></Icon>:null}
-                {elem.title}</Menu.Item>)
+                {elem.title}
+                </Link>
+                </Menu.Item>)
         })
     }
     componentWillMount(){

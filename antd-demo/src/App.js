@@ -15,7 +15,7 @@ import Header from './component/Header';
 import Home from './page/Home/index'
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Row>
@@ -24,7 +24,8 @@ function App() {
           </Col>
           <Col span={20}  >
             <Header></Header>
-            <Home></Home>
+            {props.children}
+
           </Col>
       </Row>
      
