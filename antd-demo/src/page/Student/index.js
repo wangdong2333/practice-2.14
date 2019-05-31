@@ -34,7 +34,8 @@ class Student extends Component {
                 title: '住址',
                 dataIndex: 'address',
                 key: 'address',
-              },{
+              },
+              {
                 title: '学号',
                 dataIndex: 'id',
                 key: 'id',
