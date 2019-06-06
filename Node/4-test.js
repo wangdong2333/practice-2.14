@@ -7,8 +7,8 @@ function Demo(){
 	}
 }*/
 
-//exports.call=Demo;
-//module.exports=Demo;
+exports.call=Demo;
+module.exports=Demo;
 /*
 module.exports={
 	'bb':function(){
