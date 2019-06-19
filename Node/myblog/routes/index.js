@@ -5,19 +5,19 @@ var Blog=require("../controllers/blog.js");
 
 /* GET home page. */
 
-function checkLogin(req,res,next){
-	if(req.session.USER_ID){
-		next();
-	}else{
-		res.redirect("/")
-	}
-}
+// function checkLogin(req,res,next){
+// 	if(req.session.USER_ID){
+// 		next();
+// 	}else{
+// 		res.redirect("/")
+// 	}
+// }
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get("/index",checkLogin);
+// router.get("/index",checkLogin);
 router.get("/index",Blog.index);
 
 router.get("/reg",User.reg);

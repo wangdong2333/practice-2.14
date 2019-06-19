@@ -42,8 +42,4 @@ exports.do_add=function(req,res,next){
 		}
 	})
 
-	//var date=new Date();
-	//console.log(moment.locale('cs'));
-	//console.log(moment().format());
-
 }
