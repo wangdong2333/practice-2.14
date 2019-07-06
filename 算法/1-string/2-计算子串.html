@@ -16,7 +16,8 @@
             let reg = new  RegExp(`^(${i}${j})`);
             if(reg.test(str)){
                // console.log(RegExp.$1);
-                return RegExp.$1;
+                return RegExp.$1;//这个必须在reg.test执行之后才能用，
+                                //或者说必须有小reg用完方法后才能用
                
             }else{
                 return "";
