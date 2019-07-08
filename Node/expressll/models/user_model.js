@@ -8,6 +8,10 @@ exports.insert_data=function(name,pass,callback){
 	db.query(sql,[name,pass],callback);
 }
 
+exports.check_name=function(name,callback){
+    var sql = "select * from user where uname=?";
+    db.query(sql,[name],callback);
+}
 /*
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
