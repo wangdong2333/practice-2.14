@@ -12,9 +12,17 @@ exports.do_reg=function(req,res,next){
 	// console.log(pass);
 	User_model.insert_data(name,pass,function(err,data){
 		console.log(data);
+		if(data.affectedRows>0){
+			res.redirect('/login');
+		}
+		
 	});
-	 
+
 	
+}
+
+exports.login = function(req,res,next){
+	res.render("login.ejs");
 }
 
 
