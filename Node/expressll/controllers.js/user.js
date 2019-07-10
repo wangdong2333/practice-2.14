@@ -31,7 +31,7 @@ exports.do_reg=function(req,res,next){
 				if(data.affectedRows>0){
 					res.redirect('/login');
 				}
-				
+			
 			});
 		}
 	})
