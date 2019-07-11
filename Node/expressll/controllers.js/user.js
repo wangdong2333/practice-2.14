@@ -38,7 +38,7 @@ exports.do_reg=function(req,res,next){
 
 	
 }
-/*
+
 //async
 exports.do_reg=function(req,res,next){
 	var name=req.body.uname;
@@ -107,6 +107,6 @@ exports.do_reg=function(req,res,next){
 exports.login = function(req,res,next){
 	res.render("login.ejs");
 }
-*/
+
 
 

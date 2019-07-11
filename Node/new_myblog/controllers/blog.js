@@ -55,7 +55,6 @@ exports.del=function(req,res,next){
 }
 
 exports.do_update=function(req,res,next){
-	console.log(12345);
 
 	var title=req.body.title;
 	var content=req.body.content;
