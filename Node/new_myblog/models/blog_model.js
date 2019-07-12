@@ -57,12 +57,14 @@ exports.update_hits_by_bid=function(bid,callback){
 
 //上一页数据
 exports.get_up_by_one=function(bid,callback){
+	//选出小于bid的t_blogs  desc让其逆序排列   limit 1 只取一个（最上面的那个）
 	var sql="select * from t_blogs where BLOG_ID<? ORDER BY BLOG_ID desc limit 1";
 	db.query(sql,[bid],callback);
 }
 
 //下一页数据
 exports.get_down_by_one=function(bid,callback){
+	//选出小于bid的t_blogs  asc让其升序排列   limit 1 只取一个（最上面的那个）
 	var sql="select * from t_blogs where BLOG_ID>? ORDER BY BLOG_ID asc limit 1";
 	db.query(sql,[bid],callback);
 }
