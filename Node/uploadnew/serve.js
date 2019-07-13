@@ -39,6 +39,7 @@ function  goUpload(res,req){
         var newurl=__dirname+"/upload/"+files.sfile.name;
         console.log(files.sfile.path);
         console.log(files.sfile.name);
+        
         fs.rename(oldurl,newurl,function(err){
             if(err) throw err;
             res.writeHead(200,{"Content-type":"text/plain"});
