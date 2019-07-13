@@ -5,3 +5,7 @@ exports.sel_id_by_data=function(uid,callback){
 	db.query(sql,[uid],callback);
 }
 
+exports.get_catalogs_by_id=function(uid,callback){
+	var sql="select * from t_blog_catalogs where USER_ID=?";
+	db.query(sql,[uid],callback);
+}
