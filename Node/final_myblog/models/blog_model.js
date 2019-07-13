@@ -15,3 +15,9 @@ exports.ins_blog_by_data=function(title,content,cid,date,uid,callback){
 	db.query(sql,[title,content,cid,date,uid],callback);
 }
 
+//增加文章的时候  要把文章对应的分类加1
+exports.update_catalog_by_count=function(cid,callback){
+	var sql="update t_blog_catalogs set BLOG_COUNT=BLOG_COUNT+1 where CATALOG_ID=?";
+	db.query(sql,[cid],callback);
+}
+

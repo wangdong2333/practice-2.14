@@ -40,16 +40,15 @@ exports.do_add=function(req,res,next){
 
 	Blog_model.ins_blog_by_data(title,content,cid,date,uid,function(err,data){
 		if(data.affectedRows>0){
-				res.redirect("/index");
+				// res.redirect("/index");
 
-
-			// Blog_model.update_catalog_by_count(cid,function(err,data){
-			// 	//console.log(data);
-			// 	if(data.affectedRows>0){
-			// 		res.redirect("/index");
-			// 	}
+			Blog_model.update_catalog_by_count(cid,function(err,data){
+				//console.log(data);
+				if(data.affectedRows>0){
+					res.redirect("/index");
+				}
 				
-			// })
+			})
 			
 		}
 	})
