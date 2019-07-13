@@ -33,22 +33,24 @@ function goIndex(res){
 function  goUpload(res,req){
     var form = new formidable.IncomingForm();
     form.uploadDir="./upload";
+    form.keepExtensions = true;
 
-    form.parse(req, function(err, fields, files) {
-        var oldurl=files.sfile.path;
-        var newurl=__dirname+"/upload/"+files.sfile.name;
-        console.log(files.sfile.path);
-        console.log(files.sfile.name);
+     form.parse(req, function(err, fields, files) {
+         //用fs处理加后缀名
+    //     var oldurl=files.sfile.path;
+    //     var newurl=__dirname+"/upload/"+files.sfile.name;
+    //     console.log(files.sfile.path);
+    //     console.log(files.sfile.name);
         
-        fs.rename(oldurl,newurl,function(err){
-            if(err) throw err;
-            res.writeHead(200,{"Content-type":"text/plain"});
-            res.end("上传文件成功");
-        })
-        /*
+    //     fs.rename(oldurl,newurl,function(err){
+    //         if(err) throw err;
+    //         res.writeHead(200,{"Content-type":"text/plain"});
+    //         res.end("上传文件成功");
+    //     })
+        
       res.writeHead(200, {'content-type': 'text/plain'});
       res.write('received upload:\n\n');
-      res.end(util.inspect({fields: fields, files: files}));*/
+      res.end(util.inspect({fields: fields, files: files}));
     });
     return;
 }
