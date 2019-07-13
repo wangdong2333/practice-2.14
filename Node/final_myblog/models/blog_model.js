@@ -9,3 +9,9 @@ exports.get_catalogs_by_id=function(uid,callback){
 	var sql="select * from t_blog_catalogs where USER_ID=?";
 	db.query(sql,[uid],callback);
 }
+
+exports.ins_blog_by_data=function(title,content,cid,date,uid,callback){
+	var sql="insert into t_blogs(TITLE,CONTENT,CATALOG_ID,ADD_TIME,WRITER) values(?,?,?,?,?)";
+	db.query(sql,[title,content,cid,date,uid],callback);
+}
+

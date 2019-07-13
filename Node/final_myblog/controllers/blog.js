@@ -1,4 +1,6 @@
 var Blog_model=require("../models/blog_model.js");
+var moment=require("moment");
+
 // var session = require('express-session');
 
 
@@ -25,4 +27,31 @@ exports.add=function(req,res,next){
 			"catalogs":data
 		});
 	})	
+}
+
+exports.do_add=function(req,res,next){
+	//title content date uid cid
+	var title=req.body.title;
+	var content=req.body.content;
+	var date=moment().format();
+	var uid=req.session.USER_ID;
+	var cid=req.body.catalog;
+	console.log(cid);
+
+	Blog_model.ins_blog_by_data(title,content,cid,date,uid,function(err,data){
+		if(data.affectedRows>0){
+				res.redirect("/index");
+
+
+			// Blog_model.update_catalog_by_count(cid,function(err,data){
+			// 	//console.log(data);
+			// 	if(data.affectedRows>0){
+			// 		res.redirect("/index");
+			// 	}
+				
+			// })
+			
+		}
+	})
+
 }
