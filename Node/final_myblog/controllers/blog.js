@@ -5,7 +5,7 @@ var session = require('express-session');
 exports.index=function(req,res,next){
 
 	//所有的文章都查出来
-	
+	console.log(req.session+'7890');
 	var uid=req.session.USER_ID;
 	Blog_model.sel_id_by_data(uid,function(err,data){
 		console.log(data);
