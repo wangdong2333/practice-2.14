@@ -160,6 +160,7 @@ exports.all=function(req,res,next){
 
 }
 
+//添加分类管理页面
 exports.blogs=function(req,res,next){
 	var uid=req.session.USER_ID;
 	Blog_model.get_blogs_by_id(uid,function(err,data){
@@ -172,4 +173,36 @@ exports.blogs=function(req,res,next){
 			});
 		}
 	})
+}
+//??????
+exports.blogComments=function(req,res,next){
+	// var bid=req.query.bid;
+	// Blog_model.get_blogComments_by_id(bid,function(err,data){
+	// 	if(data.length>0){
+	// 		console.log(data);
+	// 		console.log(req.session);
+	// 		res.render("blogComments",{
+	// 			"sess":req.session,
+	// 			"blogs":data,
+	// 		});
+	// 	}
+	// })
+	res.render("blogComments");
+}
+
+//修改个人资料
+exports.profile=function(req,res,next){
+	res.render("profile");
+}
+
+exports.do_profile=function(req,res,next){
+	var name=req.body.username;
+	var uid=req.session.USER_ID;	
+	Blog_model.update_profile_by_uid(name,uid,function(err,data){
+		if(data.affectedRows>0){
+			res.redirect("/index");
+		}
+	})
+
+	
 }

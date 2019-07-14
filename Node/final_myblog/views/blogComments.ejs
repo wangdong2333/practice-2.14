@@ -2,7 +2,7 @@
 <html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Content-Language" content="zh-CN">
-  <title>博客文章管理 Johnny的博客 - SYSIT个人博客</title>
+  <title>Johnny的博客 - SYSIT个人博客</title>
       <link rel="stylesheet" href="stylesheets/space2011.css" type="text/css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.css" media="screen">
   <script type="text/javascript" src="javascripts/jquery-1.js"></script>
@@ -32,7 +32,7 @@
 </div><!-- #EndLibraryItem --><div id="OSC_Topbar">
 	  <div id="VisitorInfo">
 		当前访客身份：
-		<%= sess.NAME%> [ <a href="#">退出</a> ]
+				Johnny [ <a href="#">退出</a> ]
 				<span id="OSC_Notification">
 			<a href="#" class="msgbox" title="进入我的留言箱">你有<em>0</em>新留言</a>
 																				</span>
@@ -48,78 +48,90 @@
 	</div>
 	<div id="OSC_Content">
 <div id="AdminScreen">
-    <div id="AdmprofileinPath">
+    <div id="AdminPath">
         <a href="index_logined.htm">返回我的首页</a>&nbsp;»
-    	<span id="AdminTitle">博客文章管理</span>
+    	<span id="AdminTitle">管理首页</span>
     </div>
     <div id="AdminMenu"><ul>
 	<li class="caption">个人信息管理		
 		<ol>
 			<li><a href="inbox.htm">站内留言(0/1)</a></li>
-			<li><a href="/profile">编辑个人资料</a></li>
-			<li><a href="/chpwd">修改登录密码</a></li>
-			<li><a href="/userSettings">网页个性设置</a></li>
+			<li><a href="profile.htm">编辑个人资料</a></li>
+			<li><a href="chpwd.htm">修改登录密码</a></li>
+			<li><a href="userSettings.htm">网页个性设置</a></li>
 		</ol>
 	</li>		
 </ul>
 <ul>
 	<li class="caption">博客管理	
 		<ol>
-			<li><a href="/newBlog>发表博客</a></li>
-			<li><a href="blogCatalogs.htm">博客设置/分类管理</a></li>
-			<li class="current"><a href="/blogs">文章管理</a></li>
-			<li><a href="blogComments.htm">博客评论管理</a></li>
+			<li><a href="/newBlog">发表博客</a></li>
+			<li><a href="/blogCatalogs">博客设置/分类管理</a></li>
+			<li><a href="/blogs">文章管理</a></li>
+			<li class="current"><a href="/blogComments">博客评论管理</a></li>
 		</ol>
 	</li>
 </ul>
 </div>
     <div id="AdminContent">
-<div class="MainForm BlogArticleManage">
-  <h3 class="title">共有 3 篇博客，每页显示 40 个，共 1 页</h3>
-    <div id="BlogOpts">
-	<a href="javascript:;" onclick="select_all();">全选</a>&nbsp;|
-	<a href="javascript:;" onclick="unselect_all();">取消</a>&nbsp;|
-	<a href="javascript:;" onclick="select_other();">反向选择</a>&nbsp;|
-	<a href="javascript:;" onclick="delete_sel()">删除选中</a>
-  </div>
+<div class="MainForm BlogCommentManage">
+  <h3>共有 3 篇博客评论，每页显示 20 个，共 1 页</h3>
   <ul>
-		<% blogs.forEach(function(blog,index){ %>
-		<li>
-		<input name="blog" value="24027" type="checkbox">
-		<a href="viewPost_comment.htm" target="_blank"><%= blog.TITLE%></a>
-		<small><%= blog.ADD_TIME%></small>
+		<!-- <% blogs.forEach(function(blog,index){ %>
+		<li id="cmt_24027_154693_261665734" class="row_1">
+		<span class="portrait"><a href="#" target="_blank"><img src="images/portrait.gif" alt="Johnny" title="Johnny" class="SmallPortrait" user="154693" align="absmiddle"></a></span>
+		<span class="comment">
+		<div class="user"><b><%= blog.COMMENTATOR%></b> 评论了 <a href="viewPost_comment.htm" target="_blank">测试文章3</a></div>
+		<div class="content"><p><%= blog.CONTENT%</p></div>
+		<div class="opts">
+			<span style="float:right;">
+			<a href="javascript:delete_c_by_id(24027,154693,261665734)">删除</a> |
+			<a href="javascript:delete_c_by_user(154693)">删除此人所有评论</a>
+			</span>			
+			<%= blog.ADD_TIME%>
+		</div>
+		</span>
+		<div class="clear"></div>
+		<% }) %> -->
+	
+			<li id="cmt_24027_154693_261665734" class="row_1"><li>
+			<span class="portrait"><a href="#" target="_blank"><img src="images/portrait.gif" alt="Johnny" title="Johnny" class="SmallPortrait" user="154693" align="absmiddle"></a></span>
+			<span class="comment">
+			<div class="user"><b>dd</b> 评论了 <a href="viewPost_comment.htm" target="_blank">测试文章3</a></div>
+			<div class="content"><p>加油</p></div>
+			<div class="opts">
+				<span style="float:right;">
+				<a href="javascript:delete_c_by_id(24027,154693,261665734)">删除</a> |
+				<a href="javascript:delete_c_by_user(154693)">删除此人所有评论</a>
+				</span>			
+				2018.7.15
+			</div>
+			</span>
+			<div class="clear"></div>
+			
 	</li>
-	<% }) %>
+	
 	  </ul>
-    </div>
+</div>
 <script type="text/javascript">
 
-function select_all(){
-	$("input[name='blog']").attr("checked", true);
+function delete_c_by_id(nid,uid,cid){
+  if(confirm("您确认要删除此篇评论？")){
+    var args = "cmt="+cid+"#"+uid+"#"+nid;
+    ajax_post("/action/blog/delete_blog_comments?space=154693",args,function(){$("#cmt_"+nid+"_"+uid+"_"+cid).fadeOut();});
+  }
 }
-function unselect_all(){
-	$("input[name='blog']").attr("checked", false); 
+function delete_c_by_user(uid){
+  if(confirm("您确认要删除此人发表的所有评论？")){
+    var args = "user="+uid;
+    ajax_post("/action/blog/delete_blog_comments_by_user?space=154693",args,function(){location.reload();});
+  }
 }
-function select_other(){
-	jQuery.each($("input[name='blog']"), function(i, n){
-		n.checked = !n.checked;
-	}); 
-}
-function delete_sel(){
-	var blogids = "";
-	jQuery.each($("input[name='blog']"), function(i, n){
-		if(n.checked){
-			blogids += $(this).val()+",";
-		}
-	});
-	if(blogids.length > 0){
-		if(!confirm("确认要删除选中的文章吗？")) return ;
-		ajax_post("/action/blog/batch_delete","id="+blogids,function(html){
-			location.reload();
-		});
-	}
-	else
-		alert("请选择要删除的文章");
+function delete_c_by_ip(ip){
+  if(confirm("您确认要删除来自IP地址："+ip+"发表的所有评论？")){
+    var args = "ip="+ip;
+    ajax_post("/action/blog/delete_blog_comments_by_ip?space=154693",args,function(){location.reload();});
+  }
 }
 //-->
 </script></div>
@@ -128,7 +140,7 @@ function delete_sel(){
 <script type="text/javascript">
 
 $(document).ready(function() {
-	$('#AdminTitle').text('博客文章管理');
+	$('#AdminTitle').text('管理首页');
 });
 $('.AutoCommitForm').ajaxForm({
     success: function(html) {	

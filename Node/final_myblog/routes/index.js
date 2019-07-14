@@ -36,10 +36,16 @@ router.get("/del",Blog.del);
 
 //阅读全文
 router.get("/viewPost",Blog.all);
-//文章管理
 
+//文章管理
 router.get("/blogs",Blog.blogs);
 
+//网友评论管理
+router.get("/blogComments",Blog.blogComments);
+
+//修改个人资料
+router.get("/profile",Blog.profile);
+router.post("/profile",Blog.do_profile);
 
 
 module.exports = router;

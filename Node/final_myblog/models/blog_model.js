@@ -70,3 +70,14 @@ exports.get_blogs_by_id=function(uid,callback){
 	var sql="select * from t_blogs where WRITER=?";
 	db.query(sql,[uid],callback);
 }
+
+exports.get_blogComments_by_id=function(bid,callback){
+	var sql="select * from t_comments where BLOG_ID=?";
+	db.query(sql,[bid],callback);
+}
+
+exports.update_profile_by_uid=function(name,uid,callback){
+	var sql="update t_users set Name=? where USER_ID=?";
+	db.query(sql,[name,uid],callback);
+}
+
