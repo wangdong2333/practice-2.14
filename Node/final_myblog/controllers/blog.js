@@ -78,3 +78,35 @@ exports.addBlogCatalog=function(req,res,next){
 		}
 	})
 }
+
+//跳转修改页面
+exports.update=function(req,res,next){
+	var bid=req.query.bid;
+	Blog_model.sel_data_by_bid(bid,function(err,data){
+		if(data.length>0){
+			res.render("updateBlog",{
+				"sess":req.session,
+				"blog":data[0],
+			});
+		}
+	})
+}
+
+//修改发表过的文章
+exports.do_update=function(req,res,next){
+	//获取 标题 内容  哪个文章
+	var title=req.body.title;
+	var content=req.body.content;
+	var hid=req.body.hid;
+
+	console.log(title);
+	console.log(content);
+	console.log(hid);
+	Blog_model.update_data(title,content,hid,function(err,data){
+		if(data.affectedRows>0){
+			res.redirect("/index");
+			
+		}
+	})
+}
+

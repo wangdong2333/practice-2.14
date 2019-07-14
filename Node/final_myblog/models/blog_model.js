@@ -30,3 +30,13 @@ exports.add_catalog=function(cname,uid,callback){
 	var sql="insert into t_blog_catalogs(NAME,USER_ID) values(?,?)";
 	db.query(sql,[cname,uid],callback);
 }
+
+exports.sel_data_by_bid=function(bid,callback){
+	var sql="select * from t_blogs where BLOG_ID=?";
+	db.query(sql,[bid],callback);
+}
+
+exports.update_data=function(title,content,hid,callback){
+	var sql="update t_blogs set TITLE=?,CONTENT=? where BLOG_ID=?";
+	db.query(sql,[title,content,hid],callback);
+}
