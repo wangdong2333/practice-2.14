@@ -110,3 +110,12 @@ exports.do_update=function(req,res,next){
 	})
 }
 
+//删除已发表过的文章
+exports.del=function(req,res,next){
+	var bid=req.query.bid;
+	Blog_model.del_data_by_bid(bid,function(err,data){
+		if(data.affectedRows>0){
+			res.redirect("/index");
+		}
+	})
+}

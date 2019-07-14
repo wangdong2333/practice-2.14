@@ -32,6 +32,9 @@ router.post("/addBlogCatalog",Blog.addBlogCatalog);
 router.get("/update",Blog.update);
 router.post("/update",Blog.do_update);
 
+router.get("/del",Blog.del);
+
+
 
 
 
