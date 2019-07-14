@@ -24,6 +24,9 @@ router.get("/unlogin",User.unlogin);//加载Blog.index之后 在退出登录
 router.get("/index",Blog.index);
 router.get("/add",Blog.add);
 router.post("/add",Blog.do_add);
+router.get("/blogCatalogs",Blog.Catalog);
+
+
 
 
 

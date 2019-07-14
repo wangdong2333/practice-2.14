@@ -21,3 +21,7 @@ exports.update_catalog_by_count=function(cid,callback){
 	db.query(sql,[cid],callback);
 }
 
+exports.checkCatalog=function(uid,callback){
+	var sql="select * from t_blog_catalogs where USER_ID=?";
+	db.query(sql,[uid],callback);
+}

@@ -29,6 +29,7 @@ exports.add=function(req,res,next){
 	})	
 }
 
+//增加·文章并刷新文章分类
 exports.do_add=function(req,res,next){
 	//title content date uid cid
 	var title=req.body.title;
@@ -53,4 +54,16 @@ exports.do_add=function(req,res,next){
 		}
 	})
 
+}
+
+//通过uid查出他的分类 喷出分类管理页面
+exports.Catalog=function(req,res,next){
+	uid=req.session.USER_ID;
+	Blog_model.checkCatalog(uid,function(err,data){
+		//console.log(data);
+		res.render("blogCatalogs",{
+			"sess":req.session,
+			"catalogs":data,
+		})
+	})
 }
