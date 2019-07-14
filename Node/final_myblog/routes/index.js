@@ -34,6 +34,9 @@ router.post("/update",Blog.do_update);
 
 router.get("/del",Blog.del);
 
+//阅读全文
+router.get("/viewPost",Blog.all);
+
 
 
 
