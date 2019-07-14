@@ -65,3 +65,8 @@ exports.get_down_by_one=function(bid,callback){
 	var sql="select * from t_blogs where BLOG_ID>? ORDER BY BLOG_ID asc limit 1";
 	db.query(sql,[bid],callback);
 }
+
+exports.get_blogs_by_id=function(uid,callback){
+	var sql="select * from t_blogs where WRITER=?";
+	db.query(sql,[uid],callback);
+}

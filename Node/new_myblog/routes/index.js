@@ -44,4 +44,6 @@ router.get("/del",Blog.del);
 
 router.get("/viewPost",Blog.all);
 
+
+
 module.exports = router;

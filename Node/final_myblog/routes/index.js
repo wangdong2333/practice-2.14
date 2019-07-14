@@ -36,8 +36,9 @@ router.get("/del",Blog.del);
 
 //阅读全文
 router.get("/viewPost",Blog.all);
+//文章管理
 
-
+router.get("/blogs",Blog.blogs);
 
 
 

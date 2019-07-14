@@ -158,6 +158,18 @@ exports.all=function(req,res,next){
 		}
 	});
 
-	
-	
+}
+
+exports.blogs=function(req,res,next){
+	var uid=req.session.USER_ID;
+	Blog_model.get_blogs_by_id(uid,function(err,data){
+		if(data.length>0){
+			// console.log(data[0]);
+			// console.log(req.session);
+			res.render("blogs",{
+				"sess":req.session,
+				"blogs":data,
+			});
+		}
+	})
 }
