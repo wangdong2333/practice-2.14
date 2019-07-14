@@ -67,3 +67,14 @@ exports.Catalog=function(req,res,next){
 		})
 	})
 }
+
+//添加博客分类
+exports.addBlogCatalog=function(req,res,next){
+	var cname=req.body.name;
+	var uid=req.session.USER_ID;
+	Blog_model.add_catalog(cname,uid,function(err,data){
+		if(data.affectedRows>0){
+			res.redirect("/blogCatalogs");
+		}
+	})
+}

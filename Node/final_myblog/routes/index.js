@@ -25,6 +25,7 @@ router.get("/index",Blog.index);
 router.get("/add",Blog.add);
 router.post("/add",Blog.do_add);
 router.get("/blogCatalogs",Blog.Catalog);
+router.post("/addBlogCatalog",Blog.addBlogCatalog);
 
 
 
