@@ -90,7 +90,7 @@
 	<tr>
 		<th>姓名</th>		
 		<td>
-			<input name="name" size="20" maxlength="20" class="TEXT" value="username" type="text">
+			<input name="name" size="20" maxlength="20" class="TEXT" value="<%= users.NAME%>" type="text">
 			<span class="Info" id="name_msg">不能超过10个字</span>
 		</td>
 	</tr>
@@ -154,7 +154,7 @@
 	</tr>
 	<tr>
 		<th>个性签名<br>不超过100字</th>		
-		<td><textarea name="signature" style="width: 300px; height: 100px;" class="TEXT"></textarea></td>    		
+		<td><textarea name="signature" style="width: 300px; height: 100px;" class="TEXT"><%= users.SIGNATURE%></textarea></td>    		
 	</tr>
 	<tr><th colspan="2"></th></tr>
 	<tr class="submit">
@@ -166,81 +166,7 @@
 	</tr>
 </tbody></table>
 </form>
-<script type="text/javascript">
-init_province_and_city(document.getElementById('userProvince'),'黑龙江',document.getElementById('userCity'),'哈尔滨');
-//-->
-</script></div>
 
-<script type="text/javascript">
-
-$('.AutoCommitForm').ajaxForm({
-    success: function(html) {
-		$('#error_msg').hide();
-		$('#error_msg').html(html);
-		$('#error_msg').show("fast");
-    }
-});
-//-->
-</script></div>
-	<div class="clear"></div>
 </div>
-<script type="text/javascript">
 
-$(document).ready(function() {
-	$('#AdminTitle').text('会员资料设置');
-});
-$('.AutoCommitForm').ajaxForm({
-    success: function(html) {	
-		$('#error_msg').hide();
-		if(html.length>0)
-			$('#error_msg').html("<span class='error_msg'>"+html+"</span>");
-		else
-			$('#error_msg').html("<span class='ok_msg'>操作已成功完成</span>")
-		$('#error_msg').show("fast");
-    }
-});
-$('.AutoCommitJSONForm').ajaxForm({
-	dataType: 'json',
-    success: function(json) {	
-		$('#error_msg').hide();
-		if(json.error==0){
-			if(json.msg)
-				$('#error_msg').html("<span class='ok_msg'>"+json.msg+"</span>");
-			else
-				$('#error_msg').html("<span class='ok_msg'>操作已成功完成</span>");
-		}
-		else {
-			if(json.msg)
-				$('#error_msg').html("<span class='error_msg'>"+json.msg+"</span>");
-			else
-				$('#error_msg').html("<span class='error_msg'>操作已成功完成</span>");
-		}
-		$('#error_msg').show("fast");
-    }
-});
-//-->
-</script>
-</div>
-	<div class="clear"></div>
-	<div id="OSC_Footer">© 赛斯特(WWW.SYSIT.ORG)</div>
-</div>
-<script type="text/javascript" src="js/space.htm" defer="defer"></script>
-<script type="text/javascript">
-
-$(document).ready(function() {
-	$('a.fancybox').fancybox({titleShow:false});
-});
-
-function pay_attention(pid,concern_it){
-	if(concern_it){
-		$("#p_attention_count").load("/action/favorite/add?mailnotify=true&type=3&id="+pid);
-		$('#attention_it').html('<a href="javascript:pay_attention('+pid+',false)" style="color:#A00;">取消关注</a>');	
-	}
-	else{
-		$("#p_attention_count").load("/action/favorite/cancel?type=3&id="+pid);
-		$('#attention_it').html('<a href="javascript:pay_attention('+pid+',true)" style="color:#3E62A6;">关注此文章</a>');
-	}
-}
-//-->
-</script>
 </body></html>

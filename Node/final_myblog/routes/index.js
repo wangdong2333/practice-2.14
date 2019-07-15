@@ -52,5 +52,4 @@ router.get("/userSettings",Blog.userSettings);
 router.post("/update_setting",Blog.do_userSettings);
 
 
-
 module.exports = router;

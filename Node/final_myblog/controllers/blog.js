@@ -196,16 +196,26 @@ exports.blogComments=function(req,res,next){
 	res.render("blogComments");
 }
 
-//修改个人资料XXX
+//修改个人资料
 exports.profile=function(req,res,next){
-	res.render("profile");
+	uid=req.session.USER_ID;
+	Blog_model.sel_userSettings_by_id(uid,function(err,data){
+		// console.log(data);
+		res.render("profile",{
+			"sess":req.session,
+			"users":data[0],
+		})
+	})
 }
 
 exports.do_profile=function(req,res,next){
 	var name=req.body.name;
 	var uid=req.session.USER_ID;	
 	Blog_model.update_profile_by_uid(name,uid,function(err,data){
+		console.log(name,"1234567890");
+		console.log(data,"1234567890");
 		if(data.affectedRows>0){
+			console.log("zhixing");
 			res.redirect("/index");
 		}
 	})
@@ -217,7 +227,7 @@ exports.do_profile=function(req,res,next){
 exports.userSettings=function(req,res,next){
 	uid=req.session.USER_ID;
 	Blog_model.sel_userSettings_by_id(uid,function(err,data){
-		console.log(data);
+		// console.log(data);
 		res.render("userSettings",{
 			"sess":req.session,
 			"users":data[0],
