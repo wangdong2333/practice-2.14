@@ -258,3 +258,27 @@ exports.chpwd=function(req,res,next){
 		})
 	})
 }
+
+exports.inbox=function(req,res,next){
+	uid=req.session.USER_ID;
+	Blog_model.sel_message_by_id(uid,function(err,data){
+		// console.log(req.session,"000");
+		// console.log(data,"000");
+		res.render("inbox",{
+			"sess":req.session,
+			"messages":data,
+		})
+	})
+}
+
+exports.outbox=function(req,res,next){
+	uid=req.session.USER_ID;
+	Blog_model.sel_outmess_by_id(uid,function(err,data){
+		console.log(req.session,"100");
+		console.log(data,"100");
+		res.render("outbox",{
+			"sess":req.session,
+			"messages":data,
+		})
+	})
+}

@@ -93,5 +93,12 @@ exports.update_userSettings_by_id=function(uid,Name,callback){
 	
 }
 
+exports.sel_message_by_id=function(uid,callback){
+	var sql="select * from t_messages where RECEIVER=?";
+	db.query(sql,[uid],callback);
+}
 
-
+exports.sel_outmess_by_id=function(uid,callback){
+	var sql="select * from t_messages where SENDER=?";
+	db.query(sql,[uid],callback);
+}

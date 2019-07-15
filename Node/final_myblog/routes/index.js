@@ -54,4 +54,10 @@ router.post("/update_setting",Blog.do_userSettings);
 //修改登录密码
 router.get("/chpwd",Blog.chpwd);
 
+//站内留言
+router.get("/inbox",Blog.inbox);
+
+//留言给其他人
+router.get("/outbox",Blog.outbox);
+
 module.exports = router;
