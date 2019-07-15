@@ -60,4 +60,7 @@ router.get("/inbox",Blog.inbox);
 //留言给其他人
 router.get("/outbox",Blog.outbox);
 
+//删除留言
+router.get("/delmess",Blog.delmess);
+
 module.exports = router;

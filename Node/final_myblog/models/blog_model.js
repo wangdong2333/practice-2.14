@@ -102,3 +102,8 @@ exports.sel_outmess_by_id=function(uid,callback){
 	var sql="select * from t_messages where SENDER=?";
 	db.query(sql,[uid],callback);
 }
+
+exports.del_mess_by_mid=function(mid,callback){
+	var sql="delete from t_messages where MSG_ID=?";
+	db.query(sql,[mid],callback);
+}

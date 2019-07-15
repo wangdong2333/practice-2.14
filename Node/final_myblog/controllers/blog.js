@@ -282,3 +282,15 @@ exports.outbox=function(req,res,next){
 		})
 	})
 }
+
+//删除站内留言
+exports.delmess=function(req,res,next){
+	var mid=req.query.mid;
+	Blog_model.del_mess_by_mid(mid,function(err,data){
+		if(data.affectedRows>0){
+			res.redirect("/inbox");
+		}
+	})
+}
+
+
