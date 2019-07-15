@@ -81,3 +81,17 @@ exports.update_profile_by_uid=function(name,uid,callback){
 	db.query(sql,[name,uid],callback);
 }
 
+exports.sel_userSettings_by_id=function(uid,callback){
+	var sql="select * from t_users where USER_ID=?";
+	db.query(sql,[uid],callback);
+
+}
+
+exports.update_userSettings_by_id=function(uid,Name,callback){
+	var sql="update t_users set MOOD=? where USER_ID=?";
+	db.query(sql,[Name,uid],callback);
+	
+}
+
+
+

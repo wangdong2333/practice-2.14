@@ -10,12 +10,18 @@ exports.index=function(req,res,next){
 	
 	var uid=req.session.USER_ID;
 	Blog_model.sel_id_by_data(uid,function(err,data){
-		console.log(data);
-		res.render("index_logined",{
-			'blogs':data,
-			'sess':req.session,
-		})
-	});
+		Blog_model.sel_userSettings_by_id(uid,function(err,data1){
+			console.log(data1);
+			req.session=data[0];
+			
+			res.render("index_logined",{
+				'blogs':data,
+				'sess':req.session,
+				'userin':data1[0],
+			})
+		});
+	})
+	
 
 }
 
@@ -174,7 +180,7 @@ exports.blogs=function(req,res,next){
 		}
 	})
 }
-//??????
+//??????博客评论管理
 exports.blogComments=function(req,res,next){
 	// var bid=req.query.bid;
 	// Blog_model.get_blogComments_by_id(bid,function(err,data){
@@ -190,13 +196,13 @@ exports.blogComments=function(req,res,next){
 	res.render("blogComments");
 }
 
-//修改个人资料
+//修改个人资料XXX
 exports.profile=function(req,res,next){
 	res.render("profile");
 }
 
 exports.do_profile=function(req,res,next){
-	var name=req.body.username;
+	var name=req.body.name;
 	var uid=req.session.USER_ID;	
 	Blog_model.update_profile_by_uid(name,uid,function(err,data){
 		if(data.affectedRows>0){
@@ -204,5 +210,30 @@ exports.do_profile=function(req,res,next){
 		}
 	})
 
-	
+}
+
+//个性设置
+
+exports.userSettings=function(req,res,next){
+	uid=req.session.USER_ID;
+	Blog_model.sel_userSettings_by_id(uid,function(err,data){
+		console.log(data);
+		res.render("userSettings",{
+			"sess":req.session,
+			"users":data[0],
+		})
+	})
+}
+
+exports.do_userSettings=function(req,res,next){
+	uid=req.session.USER_ID;
+	Name=req.body.space_name;
+	console.log(uid,"123");
+	console.log(Name,"456");
+	Blog_model.update_userSettings_by_id(uid,Name,function(err,data){
+		// console.log(data);
+		if(data.affectedRows>0){
+			res.redirect("/index");
+		}
+	})
 }

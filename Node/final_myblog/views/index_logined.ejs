@@ -23,17 +23,17 @@
 <![endif]-->
 <div id="OSC_Screen"><!-- #BeginLibraryItem "/Library/OSC_Banner.lbi" -->
 <div id="OSC_Banner">
-    <div id="OSC_Slogon"><%= sess.NAME%>'s Blog</div>
+    <div id="OSC_Slogon"><%= userin.NAME%>'s Blog</div>
     <div id="OSC_Channels">
         <ul>
-        <li><a href="#" class="project">心情 here...</a></li>
+        <li><a href="#" class="project"><%= userin.MOOD%></a></li>
         </ul>
     </div>
     <div class="clear"></div>
 </div><!-- #EndLibraryItem --><div id="OSC_Topbar">
 	  <div id="VisitorInfo">
 		当前访客身份：
-				<%= sess.NAME%> [ <a href="/unlogin">退出</a> ]
+				<%= userin.NAME%> [ <a href="/unlogin">退出</a> ]
 				<span id="OSC_Notification">
 			<a href="inbox.htm" class="msgbox" title="进入我的留言箱">你有<em>0</em>新留言</a>
 																				</span>
@@ -50,7 +50,7 @@
 	<div id="OSC_Content"><div class="SpaceChannel">
 	<div id="portrait"><a href="adminIndex.htm"><img src="images/portrait.gif" alt="Johnny" title="Johnny" class="SmallPortrait" user="154693" align="absmiddle"></a></div>
     <div id="lnks">
-		<strong><%= sess.NAME%>的博客</strong>
+		<strong><%= userin.NAME%>的博客</strong>
 		<div><a href="index_logined.htm">TA的博客列表</a>&nbsp;|
 			<a href="sendMsg.htm">发送留言</a></div>
 	</div>

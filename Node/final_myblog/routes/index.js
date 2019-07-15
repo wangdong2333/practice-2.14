@@ -47,5 +47,10 @@ router.get("/blogComments",Blog.blogComments);
 router.get("/profile",Blog.profile);
 router.post("/profile",Blog.do_profile);
 
+//网站个性设置
+router.get("/userSettings",Blog.userSettings);
+router.post("/update_setting",Blog.do_userSettings);
+
+
 
 module.exports = router;
