@@ -18,6 +18,25 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  //mysql
+  config.mysql = {
+    client: {
+      // host
+      host: 'localhost',
+      // 端口号
+      port: '3306',
+      // 用户名
+      user: 'root',
+      // 密码
+      password: '',
+      // 数据库名
+      database: 'xxblog',
+    },
+  
+  };
+
+ 
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
@@ -28,3 +47,11 @@ module.exports = appInfo => {
     ...userConfig,
   };
 };
+ //配置模板引擎（ejs）
+ exports.view = {
+  mapping: {
+    '.html': 'ejs',
+  },
+};
+
+
