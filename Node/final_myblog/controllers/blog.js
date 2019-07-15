@@ -247,3 +247,14 @@ exports.do_userSettings=function(req,res,next){
 		}
 	})
 }
+
+exports.chpwd=function(req,res,next){
+	uid=req.session.USER_ID;
+	Blog_model.sel_userSettings_by_id(uid,function(err,data){
+		// console.log(data);
+		res.render("chpwd",{
+			"sess":req.session,
+			"users":data[0],
+		})
+	})
+}

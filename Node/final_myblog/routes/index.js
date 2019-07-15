@@ -51,5 +51,7 @@ router.post("/profile",Blog.do_profile);
 router.get("/userSettings",Blog.userSettings);
 router.post("/update_setting",Blog.do_userSettings);
 
+//修改登录密码
+router.get("/chpwd",Blog.chpwd);
 
 module.exports = router;
