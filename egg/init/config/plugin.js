@@ -16,4 +16,5 @@ exports.ejs = {
 exports.mysql = {
   enable: true,
   package: 'egg-mysql',
+  // path: path.join(__dirname, '../lib/plugin/egg-mysql'),
 };
