@@ -5,16 +5,23 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/', controller.home.index);
-  router.get('/tag', controller.home.tag);
-  router.get('/course',controller.home.course);
+  router.get('/', controller.news.index);
+  router.get('/content', controller.news.content);
 
-  router.get('/free', controller.course.free);
-  router.get('/chapter', controller.course.chapter);
-  router.get('/consult', controller.course.consult);
-  router.get('/comment', controller.course.comment);
-  router.get('/update', controller.course.update);
-  router.get('/teacher', controller.course.teacher);
+
+  // router.get('/tag', controller.home.tag);
+  // router.get('/course',controller.home.course);
+  // router.get('/user',controller.home.user);
+
+
+  // router.get('/free', controller.course.free);
+  // router.get('/chapter', controller.course.chapter);
+  // router.get('/consult', controller.course.consult);
+  // router.get('/comment', controller.course.comment);
+  // router.get('/update', controller.course.update);
+  // router.get('/teacher', controller.course.teacher);
+
+
 
 
 

@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const Controller = require('egg').Controller;
 
@@ -40,13 +40,14 @@ class CourseController extends Controller {
     // res.json(update);    
   }
 
-  async teacher() {
+  // async teacher() {
     
-    const { ctx } = this;
-    const teacher = await ctx.service.user.find_teacher(course_id);
-    res.json(teacher);    
-  }
+  //   const { ctx } = this;
+  //   const teacher = await ctx.service.user.find_teacher(course_id);
+  //   res.json(teacher);    
+  // }
 
 }
 
 module.exports = CourseController;
+*/

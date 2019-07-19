@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const Controller = require('egg').Controller;
 
@@ -19,17 +19,19 @@ class HomeController extends Controller {
     
   };
 
-  async course(){
-    const { ctx } = this;
-    const courses = await ctx.service.user.find_course();
-    // console.log(tags,'123');
+  // async course(){
+  //   const { ctx } = this;
+  //   const courses = await ctx.service.user.find_course();
+  
     
-  }
+  // }
+
+  
  
 }
 
 module.exports = HomeController;
-
+*/
 
 
 // 'http://localhost/home/index?a'    'get/post'

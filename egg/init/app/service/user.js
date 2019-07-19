@@ -71,6 +71,12 @@ class UserService extends Service {
     let teacher_list=await this.app.mysql.query(sql,[course_id]);
     console.log(teacher_list);
   };
+
+  async find_user(){
+    var sql="select * from t_user where user_id=1";
+    let user_list=await this.app.mysql.query(sql);
+    console.log(user_list);
+  };
 }
 
 module.exports = UserService;
