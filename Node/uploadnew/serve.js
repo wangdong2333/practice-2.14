@@ -48,9 +48,9 @@ function  goUpload(res,req){
     //         res.end("上传文件成功");
     //     })
         console.log(files.sfile.path);
-      res.writeHead(200, {'content-type': 'text/plain'});
-      res.write('received upload:\n\n');
-      res.end(util.inspect({fields: fields, files: files}));
+    //   res.writeHead(200, {'content-type': 'text/plain'});
+    //   res.write('received upload:\n\n');
+    //   res.end(util.inspect({fields: fields, files: files}));
     });
     return;
 }
