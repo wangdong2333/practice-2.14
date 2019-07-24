@@ -47,10 +47,14 @@ function  goUpload(res,req){
     //         res.writeHead(200,{"Content-type":"text/plain"});
     //         res.end("上传文件成功");
     //     })
-        console.log(files.sfile.path);
+        // console.log(files.sfile.path);
+        var a =files.sfile.path
+        return a;
     //   res.writeHead(200, {'content-type': 'text/plain'});
     //   res.write('received upload:\n\n');
     //   res.end(util.inspect({fields: fields, files: files}));
     });
+    console.log(a);
+
     return;
 }
