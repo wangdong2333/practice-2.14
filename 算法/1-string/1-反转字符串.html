@@ -9,13 +9,33 @@
 <body>
     <script>
         //力扣557
-        let str = "Let's take LeetCode contest";
+        let str1 = "Let's take LeetCode contest";
         function reverseWords(s){
             return s.split(" ").map((item) =>{
                 return item.split("").reverse().join("");
             }).join(" ");
         }
+        console.log(reverseWords(str1));
+
+
+        //题解
+        //1、将字符串转化为数组  目的：将单词一个一个拆下来
+        let str = "Let's take LeetCode contest";
+        function reverseWords(s){
+           let arr = s.split(" ");//["let's","take","LettCode","contest"]
+        //2、循环每一个数组,将数组中的元素（字符串）进行反转
+            let res = arr.map((item) =>{
+                let arr1 = item.split("");//每一个 [l,e,t,',s]
+        //3、将每一个数组中的元素颠倒
+                let arr2 = arr1.reverse();//每一个[s,',t,e,l]
+        //4、将每一个数组装化成字符串
+                return arr2.join("");//每一个["s'tel"]
+            })
+        //5、将每一个数组中包含的小字符串在转化成大的字符串
+                return res.join(" ");//s'teL ekat edoCteeL tsetnoc
+        }
         console.log(reverseWords(str));
+
         
         
     </script>
