@@ -9,18 +9,18 @@
 <body>
     <script>
         //力扣557
-        let str1 = "Let's take LeetCode contest";
+        let str = "Let's take LeetCode contest";
         function reverseWords(s){
             return s.split(" ").map((item) =>{
                 return item.split("").reverse().join("");
             }).join(" ");
         }
-        console.log(reverseWords(str1));
+        console.log(reverseWords(str));
 
 
-        //题解
+        //题解一
         //1、将字符串转化为数组  目的：将单词一个一个拆下来
-        let str = "Let's take LeetCode contest";
+        let str1 = "Let's take LeetCode contest";
         function reverseWords(s){
            let arr = s.split(" ");//["let's","take","LettCode","contest"]
         //2、循环每一个数组,将数组中的元素（字符串）进行反转
@@ -34,9 +34,23 @@
         //5、将每一个数组中包含的小字符串在转化成大的字符串
                 return res.join(" ");//s'teL ekat edoCteeL tsetnoc
         }
-        console.log(reverseWords(str));
+        console.log(reverseWords(str1));
 
-        
+        //题解二
+        //split是按照 某个东西进行分割 而match是我爸我想要的东西拿出来，括号里面面一般是正则表达式
+        let str2 = "Let's take LeetCode contest";
+        function reverseWords(s){
+            return s.match(/[\w']+/g).map((item)=>{
+            return item.split("").reverse().join("");
+        }).join(" ");
+        }
+        console.log(reverseWords(str2));
+
+
+
+
+        //split里面可以按照正则表达式分割，此题时每个单词之间是空格，
+        // 但是每个单词之间可以是1，2，3，4，此时就需要用到正则表达式进行匹配了
         
     </script>
 </body>
