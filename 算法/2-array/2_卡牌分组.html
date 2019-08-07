@@ -8,7 +8,32 @@
 </head>
 <body>
     <script>
-            
+        let input = [1];
+        function hasGroupsSizeX(arr){
+            var str = arr.sort((a,b)=>a-b).join("");
+            var a = str.match(/(\d)\1+|\d/g);
+        while(a.length > 1){
+            //"11"
+            let i = a.shift().length;
+            //"22"
+            let j = a.shift().length;
+            let k = fn(i,j);
+            //[00,44]
+            a.unshift("0".repeat(k));//00
+        }
+        return a[0].length>1?true:false;
+        }
+        console.log(hasGroupsSizeX(input));
+
+        //求最大公约数
+        function fn(a,b){
+            if(b==0){
+                return a;
+            }else{
+                return fn(b,a % b);
+            }
+        }
+        // console.log(fn(12,4));
     </script>
 </body>
 </html>
