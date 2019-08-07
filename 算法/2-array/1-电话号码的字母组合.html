@@ -9,14 +9,37 @@
 <body>
     <script>
         //力扣17
+        let arr = ["","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"];
+        function letterCombinations(str){
+            var num = str.split("");//[2,3]
+            var code = [];
+            num.forEach((item) => {
+                code.push(arr[item]);
+            });
+           return fn(code);
+        }
+        //["abc","def"] 
         function fn(arr){
+            var res = [];
             for(let i=0;i<arr[0].length;i++){
-                
-                for(let j= 0;j<arr[1].length;i++){
-
+                for(let j= 0;j<arr[1].length;j++){
+                    res.push(arr[0][i]+arr[1][j]);
                 }
             }
+            arr.splice(0,2,res);
+            if(arr.length > 1){
+                fn(arr);
+            }
+            return arr[0];
         }
+        console.log(letterCombinations("234"));
+
+// 基本思想:1、我们传入的是字符串，需要加个字符串装化成数组，例如：[2，3]
+//         2、把拆分之后的数组循环，定义一个空数组，从原给的arr中找出传入字符串对应的那些
+//             字符串推进新定义好的空数组，例如：["abc","def"] 传给下一个方法
+//         3、将传入数组的前两个进行双重for循环，目的是一个一个拼一起
+//         4、将已经拼好的两个数组变成第一个数组：  arr.splice(0,2,res);
+//             与最近的一个接着for循环，直到arr.length=1，结束返回arr中的第一个
     </script>
 </body>
 </html>
