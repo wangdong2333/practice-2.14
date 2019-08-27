@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Html5(选择器)</title>
 </head>
+
 <body>
+    <!-- ul>li.list*5 -->
+    <ul>
+        <li class="list">1</li>
+        <li class="list">2</li>
+        <li class="list">3</li>
+        <li class="list">4</li>
+        <li class="list">5</li>
+    </ul>
+    <p data-tag=true>H5里面设置属性</p>
+
+    <img src="" data-src="" alt="">
+
     <script>
-        
+        //querySelector 查找满足条件的第一个元素  返回一个dom对象
+        let oLi = document.querySelector(".list");
+        console.log(oLi);
+         //querySelectorAll 查找满足条件所有元素  返回一个类数组
+        let aLi = document.querySelectorAll(".list");
+        console.log(aLi);
+
+        for(let i=0; i<aLi.length; i++){
+            aLi[i].index = i; //给对象加索引
+            aLi[i].setAttribute("tag",true);//给对象加属性
+            console.log(aLi[i]);
+        }
+
+        let oP = document.querySelector("p");
+        //dataset设置一个属性
+        oP.dataset.index = 1;//自定义的属性是data-index
+
+        console.log(oP.dataset);//返回一个对象
     </script>
 </body>
 </html>
