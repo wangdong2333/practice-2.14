@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name:'zs',
+            age:'18',
+            hobby:{
+                sleep:"sleeping",
+                eat:"eating",
+                read:{
+                    code:"everyday",
+                    book:"book",
+                }
+                
+            }
+        }
+        //函数功能就是把对象里面的字符串一个一个的赋值过去，而非将整个对象直接赋值过去
+        function deepClone(obj){
+            let temp =  {};
+            for(key in obj){
+                if(obj[key] instanceof Object){
+                    temp[key] = deepClone(obj[key]);
+                }else{
+                    temp[key] = obj[key];
+                }
+            }
+            return temp;
+        }
+        
+        let obj1 = deepClone(obj);
+        obj.name = 'lisi';
+        obj.hobby.eat = "1234567890";
+        obj.hobby.read.book = "I like read books";
+        console.log(obj);
+        console.log(obj1);
+    </script>
+</body>
+</html>
