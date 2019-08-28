@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>changeHash</button>
+    <div></div>
+    <script>
+        let oBtn = document.querySelector("button");
+        let oDiv = document.querySelector("div");
+        oBtn.onclick = function(){
+            // location.hash = Math.random();
+            history.pushState(Math.random(),'');//两个参数  第一个是值，第二个是改变标题
+                                                //（一般来说标题不用改变，所以传了一个空字符）
+        }
+        window.onhashchange = function(){
+            console.log(location.hash);
+        oDiv.innerHTML = location.hash;
+        }
+
+        window.onpopstate = function(e){
+            console.log(e.state);
+        }
+      
+    </script>
+</body>
+</html>
