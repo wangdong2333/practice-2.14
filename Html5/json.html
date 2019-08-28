@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let p = {
+            name:"zs",
+            age:'18',
+        } 
+        // console.log(p);
+        let p1 = JSON.stringify(p);
+        // console.log(p1);   
+        let p2 = JSON.parse(p1);
+        // console.log(p2);
+
+        //深拷贝
+        let p3 = JSON.stringify(p);
+        console.log(p3);
+        p3 = JSON.parse(p3);
+        console.log(p3);
+        p.name = "lisi";
+        p.age = "108";
+        console.log(p);
+        console.log(p3);
+        // let p4 = p;
+        // console.log(p4);
+    </script>
+</body>
+</html>
