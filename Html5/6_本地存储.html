@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 本地存储：
+        1、Cookie：
+        特点： 可存储数据大小为4k，可设置过期时间，如果不设置过期时间，浏览器窗口关闭之后就没了。
+        2、localStorage
+        特点： 可存储数据大小为5M，没有过期时间，会永久的存储在浏览器中（除非手动删除）。
+        3、sessionStorage
+        特点： 可存储数据大小为5M，但是过期时间仅限于当前的回话窗口，浏览器窗口关闭之后就没了。
+    -->
+    <script>
+
+
+        //localStorage
+        localStorage.name = 'zs';
+        localStorage.setItem('age','10');
+        console.log(localStorage);
+        console.log(localStorage.name);
+        console.log(localStorage.getItem('name'));
+
+        //sessionStorage
+        sessionStorage.name = 'lisi';
+        sessionStorage.setItem("hobby","eat");
+        console.log(sessionStorage);
+        console.log(sessionStorage.name);
+        console.log(sessionStorage.getItem('hobby'));
+    </script>
+</body>
+</html>
