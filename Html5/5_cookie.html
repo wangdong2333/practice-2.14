@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.cookie = 'name =  zs';
+
+        let date = new Date();
+        date.setDate(date.getDate() + 1);
+        //toUTCString  日期对象转化为字符串
+        //expires  过期时间
+        document.cookie = 'text = 1;expires='+date.toUTCString();
+
+        console.log(document.cookie);
+
+        //设置Cookie
+        function setCookie(key,value,expires){
+            let date = new Date();
+            date.setDate(date.getDate() + expires*1);
+            document.cookie = key + '=' + value + ';espires='+ date.toUTCString();
+        }
+        setCookie('name','zs','1');
+
+        //删除Cookie
+        function delCookie(key){
+            let date = new Date();
+            date.setDate(date.getDate() - 1);
+            document.cookie = key + '=null;expires=' + date.toUTCString();
+        }
+        delCookie("text2");
+
+        //获取cookie
+        function getCookie(key){
+            var tmpl = document.cookie;//'name=zs; text1=aaa'
+            var arr1 = teml.split(";");//["name=zs"," text1=aaa"]
+            for(let i=0; i<arr1.length; i++){
+                let arr2 = arr1[i].split("=");//['name',' zs']
+                if(arr2[0].trim() == key){//arr.trim是去掉数组前后的空格
+                    return arr2[1];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
