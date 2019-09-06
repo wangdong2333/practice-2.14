@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // setTimeout(function(){
+        //     console.log("进程一");
+        //     setTimeout(() =>{
+        //         console.log('进程二');
+        //         setTimeout(() =>{
+        //             console.log("进程三");
+        //         },1000);
+        //     },2000);
+        // },1000);
+
+
+        // let p1 = new Promise(
+        //     (resolve,reject) =>{
+        //     setTimeout(() =>{
+        //         console.log("请求一成功");
+        //         // reject();
+        //         resolve();
+        //     },1000);
+           
+        // }).then(
+        //     function(){
+        //     console.log("可以进行请求二");
+        //     setTimeout(() =>{
+        //         console.log("请求二成功");
+        //     },2000);
+        // },() =>{
+        //     console.log("请求二请求失败");
+        // })
+
+        let p1 = new Promise(
+            (resolve,reject) =>{
+            setTimeout(() =>{
+                console.log("请求一成功");
+                // reject();
+                resolve();
+            },1000);
+        }).then(
+          function(){
+              return new Promise(
+                  function(resolve,reject){
+                  console.log("可以开始请求二");
+                setTimeout(() =>{
+                    console.log('请求二成功');
+                    // resolve();
+                    reject();
+                },1000)
+              })
+          },
+          function(){
+              console.log('请求二失败');
+          }
+       ).then(
+           function(resolve,reject){
+            console.log("可以开始请求三");
+            setTimeout(() =>{
+                console.log('请求三成功');
+            },1000)
+           },
+           function(){
+               console.log('请求三失败');
+           }
+       )
+
+        
+    
+
+        
+        
+    </script>
+</body>
+</html>
