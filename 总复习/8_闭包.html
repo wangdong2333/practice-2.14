@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        var b = 10;
+        // var b = 10;
         // function fn1(val){
         //     let a = 10;
         //     b++;
@@ -19,14 +19,20 @@
         //     fn2();
         // }
         // fn1("hello");
-        function fn(){
-            b++;
-            console.log(b);
-        }
-        fn();
-        fn();
-        fn();
-        
+      
+        var f1 = (function fn1(){
+            var a= 10;
+            return function(){
+                a++;
+                console.log(a);
+            }
+        })()//函数的立即调用
+        f1();
+        f1();
+
+        f1();
+
+      
     </script>
 </body>
 </html>

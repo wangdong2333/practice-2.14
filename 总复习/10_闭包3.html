@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function count(){
+        //     var arr = [];
+        //     for(var i=0; i<=3; i++){
+        //         arr.push(function(){
+        //             return i*i;
+        //         })
+        //     }
+        //     return arr;
+        // }
+
+        // var results = count();
+        // var f1 = results[0];
+        // var f2 = results[1];
+        // var f3 = results[2];
+        // var f4 = results[3];
+        // console.log(f1(),f2(),f3(),f4());// 16 16 16 16
+
+        function count(){
+            var arr = [];
+            for(var i=0; i<=3; i++){
+                arr.push((function(i){
+                    return function(){
+                        return i*i;
+                    }
+                })(i))
+            }
+            return arr;
+        }
+        var results = count();
+        var f1 = results[0];
+        var f2 = results[1];
+        var f3 = results[2];
+        var f4 = results[3];
+      
+
+        console.log(f1(),f2(),f3(),f4());//0 1 4 9
+      
+        
+        </script>
+</body>
+</html>
