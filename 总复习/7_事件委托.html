@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+    li{
+        background: #f00;
+    }
+    </style>
+<body>
+    <button id="btn">添加添加</button>
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+    </ul>
+    <script>
+        
+        var oUl = document.getElementById('ul1');
+        var aLi = document.getElementsByTagName('li');
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function(){
+            var oLi = document.createElement('li');
+            oLi.innerHTML = parseInt(Math.random()*100);
+            oUl.appendChild(oLi);
+        }
+        oUl.onclick = function(e){
+            e = e || window.event; //兼容性
+            var target = e.target || e.srcElement; //兼容性
+        //事件源e.target 判断是否点击LI
+            if(e.target.tagName == 'LI')//大写的LI
+            console.log(e.target.innerHTML);
+        }
+
+    
+    </script>
+</body>
+</html>
