@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3,4,"abc"];
+        let b = {
+            name:'zs',
+            age:'18',
+        }
+        //Array.isArray
+        console.log(Array.isArray(a));
+        console.log(Array.isArray(b));
+
+        //instanceof
+        console.log(a instanceof Array);
+        console.log(b instanceof Object);
+
+        //constructor
+        console.log(a.constructor == Array);
+        console.log(b.constructor == Array);
+
+
+        
+    
+    </script>
+</body>
+</html>
