@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+</style>
+<body>
+    <ul>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+    <script>
+        var aLi = document.getElementsByTagName('li');
+        for(let i=0; i<aLi.length;i++){
+            aLi[i].onclick = function(){
+                setTimeout((function(){
+                    console.log(this);
+                }).bind(this),1000)//只能用bind，不能用apply，因为定时器是到时间了自己调用，如果用apply，那么上来就直接调用了，不会起到延时的效果
+                // console.log(this);
+            }
+        }
+        var obj = {
+            name:'zs',
+        }
+        function a(x,y){
+                console.log(this,x,y);
+            }
+            a.call(obj,3,5);
+            a.apply(obj,[3,5]);
+            a.bind(obj,3,5)();
+
+    
+    </script>
+</body>
+</html>
