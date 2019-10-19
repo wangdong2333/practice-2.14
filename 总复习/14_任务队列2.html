@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    setTimeout(() => {
+        console.log('1')
+
+        new Promise((resolve) => {
+            resolve()
+        }).then(() => {
+            console.log('2')
+        })
+    }, 0);
+
+    setTimeout(() => {
+        console.log('3')
+    }, 0);
+
+    new Promise((resolve) => {
+        resolve()
+    }).then(() => {
+        console.log('4')
+        new Promise((resolve) => {
+            resolve()
+        }).then(() => {
+            console.log('5')
+        })
+        setTimeout(() => {
+            console.log('6')
+        }, 0);
+    })
+
+    new Promise((resolve) => {
+        resolve()
+    }).then(() => {
+        console.log('7')
+    })
+
+// 输出顺序为： 4，7，5，1，2，3，6    
+        
+        
+    </script>
+</body>
+</html>
