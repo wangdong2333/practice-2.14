@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    jq最核心的是$,他是一个函数.函数中返回一个自定义的jq对象,
+    Jquery她是一个类,在这个类的原形下有许多jq自定义的方法.
+    每次调用$返回一个新的jq对象,同时在$函数中根据传入参数的类型
+    ,函数或者字符串.判断需要做的事情。
+    在每一个方法中,return this,this就是在$函数中返回的jq对象..链式操作
+ -->
+    <script>
+        // $(#div1)
+        
+        function $(str){
+            return new Jquery(str);
+        }
+        function Jquery(str){
+
+        }
+    
+    </script>
+</body>
+</html>
