@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            /* transition: all 2s ease 2s; */
+            animation: run 5s linear 2s 3 forwards;
+        }
+        #div1:hover{
+            width: 600px;
+            background: #00f;
+        }
+        @keyframes run {
+            0%{}
+            50%{
+                width: 1000px;
+            }
+            100%{
+                height: 1000px;
+            }
+
+        }
+    </style>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
