@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function asyncPrint(){
+            console.log('函数执行'+new Date());
+            await fristReq();
+            console.log("第一个函数执行完毕"+new Date().toTimeString());
+            await secondReq();
+            console.log("第二个函数执行完毕"+new Date().toTimeString());
+
+        }
+        async function fristReq(){
+            return new Promise(function(resolve,reject){
+                setTimeout(() =>{
+                    resolve();
+                },1000);
+            })
+        }
+
+        async function secondReq(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    resolve();
+                },2000)
+            })
+        }
+
+        asyncPrint();
+    </script>
+</body>
+</html>
