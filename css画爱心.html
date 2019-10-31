@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS画爱心</title>
+</head>
+<body>
+    <style>
+        body{
+            background: url('./imges/123.jpg') no-repeat;
+            background-size: cover;
+       
+        }
+        /* img{
+            position:absolute;
+            top:0px;
+            left:0px;
+            z-index:-999;
+        } */
+        .heart{
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            position: relative;
+            /* margin: 100px auto; */
+            left: 50px;
+            top: 200px;
+            animation: size 1s infinite;
+            animation-direction: alternate;
+        }
+        .heart::before,
+        .heart::after{
+            content:'';
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            position:absolute;
+            border-radius: 50%;
+
+        }
+        .heart::before{
+            left: -90px;
+        }
+        .heart::after{
+            top: -90px;
+        }
+        @keyframes size {
+            0%{
+                transform: scale(0.6) rotate(45deg);
+            }
+            100%{
+                transform: scale(1) rotate(45deg);
+            }
+        }
+    </style>
+
+    <div class="heart"></div>
+    <!-- <img src="./imges/123.jpg" alt=""> -->
+</body>
+</html>
