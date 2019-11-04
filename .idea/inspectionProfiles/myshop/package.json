@@ -1,0 +1,9 @@
+{
+  "name": "myshop",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-service": "^4.0.0"
+  }
+}
