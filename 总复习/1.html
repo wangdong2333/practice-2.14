@@ -19,16 +19,23 @@
     <script>
 
         // const b;//已经初始化必须赋值
-        let a;
-        function fn(){
+        // let a;
+        function fn1(){
             // a = a+1;
             console.log(a);
         }
 
-        fn()
+        // fn1()
         // var a=10;
         // let a=10;
 
+        let a = 10;
+        function fn(){
+            console.log(a); // a is not defined（报错）
+            let a = 20;
+            console.log(a);//输出结果为20
+        }
+        fn();
         
     </script>
 </body>
