@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // var obj1 = { name: 'A' }; 
+        // var obj2 = obj1; 
+        // // obj2.name = 'B';
+        // // console.log(obj1.name);
+
+        // function f(obj) { 
+        //     obj.name = 'C'; 
+        // }
+        // f(obj1);
+        // console.log(obj2.name);
+        // var a = 3; 
+        // function fn(a) { a = a + 1; } 
+        // fn();
+        // console.log(a);
+        // var a = 3;
+        // function fn(a){
+        //     a = a+1;
+        //     return a;
+        //     // console.log(a);
+        // }
+        // fn(a);
+        // console.log(fn(a));
+
+        var getTimes = (function () {
+            var num = 0;
+            var handler = {
+                addit: function () {
+                    return ++num;
+                },
+                init: function () {
+                    num = 0;
+                },
+                destroy: function () {
+                    num = null;
+                }
+            }
+            return handler;
+        })()
+    </script>
+    <input type="button" value="addit" onclick="alert(getTimes.addit()) " />
+    <input type="button" value="init" onclick=" getTimes.init() " />
+    <input type="button" value="destroy" onclick=" getTimes.destroy() " />
+
+    </script>
+</body>
+
+</html>

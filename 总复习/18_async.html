@@ -8,31 +8,44 @@
 </head>
 <body>
     <script>
-        async function asyncPrint(){
-            console.log('函数执行'+new Date());
-            await fristReq();
-            console.log("第一个函数执行完毕"+new Date().toTimeString());
-            await secondReq();
-            console.log("第二个函数执行完毕"+new Date().toTimeString());
+        // async function asyncPrint(){
+        //     console.log('函数执行'+new Date());
+        //     await fristReq();
+        //     console.log("第一个函数执行完毕"+new Date().toTimeString());
+        //     await secondReq();
+        //     console.log("第二个函数执行完毕"+new Date().toTimeString());
 
+        // }
+        // async function fristReq(){
+        //     return new Promise(function(resolve,reject){
+        //         setTimeout(() =>{
+        //             resolve();
+        //         },1000);
+        //     })
+        // }
+
+        // async function secondReq(){
+        //     return new Promise(function(resolve,reject){
+        //         setTimeout(function(){
+        //             resolve();
+        //         },2000)
+        //     })
+        // }
+        async function fn(){
+            console.log('1');
+            await f1();
+            console.log('2');
         }
-        async function fristReq(){
+        async function f1(){
             return new Promise(function(resolve,reject){
                 setTimeout(() =>{
                     resolve();
-                },1000);
+                    console.log('3');
+                },1000)
             })
         }
-
-        async function secondReq(){
-            return new Promise(function(resolve,reject){
-                setTimeout(function(){
-                    resolve();
-                },2000)
-            })
-        }
-
-        asyncPrint();
+        fn();
+        // asyncPrint();
     </script>
 </body>
 </html>
