@@ -35,26 +35,43 @@
         // fn(a);
         // console.log(fn(a));
 
-        var getTimes = (function () {
-            var num = 0;
-            var handler = {
-                addit: function () {
-                    return ++num;
-                },
-                init: function () {
-                    num = 0;
-                },
-                destroy: function () {
-                    num = null;
-                }
-            }
-            return handler;
-        })()
-    </script>
-    <input type="button" value="addit" onclick="alert(getTimes.addit()) " />
-    <input type="button" value="init" onclick=" getTimes.init() " />
-    <input type="button" value="destroy" onclick=" getTimes.destroy() " />
+        //     var getTimes = (function () {
+        //         var num = 0;
+        //         var handler = {
+        //             addit: function () {
+        //                 return ++num;
+        //             },
+        //             init: function () {
+        //                 num = 0;
+        //             },
+        //             destroy: function () {
+        //                 num = null;
+        //             }
+        //         }
+        //         return handler;
+        //     })()
 
+        // <!--  <input type="button" value="addit" onclick="alert(getTimes.addit()) " />
+        //  <input type="button" value="init" onclick=" getTimes.init() " />
+        //  <input type="button" value="destroy" onclick=" getTimes.destroy() " /> -->
+        // let a = 2
+        // function A() {
+        //     var a = 1
+        //     console.log(window.a)
+        // }
+        // A();
+
+
+
+        setTimeout(function () { console.log('a') })
+        var p = new Promise(function (resolve, reject) {
+            console.log('b')
+            resolve()
+            console.log('c')
+        })
+        p.then(function () { console.log('d') })
+        console.log('e')
+        //b c e d  a
     </script>
 </body>
 
