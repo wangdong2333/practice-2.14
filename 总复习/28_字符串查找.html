@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 其实很多现在前后端交互处理数据的方法，用的都是递归变多，千万别小瞧递归
+        // 思路: 不能使用字符串的相应方法，我们可以把字符串转换成数组，首先使用递归不断去比对相应的数组索引
+        // 随机的字符
+        var str1 = 'adfacddtgjacbasaclsaacdctacw';
+        // 条件筛选的字符
+        var str2 = 'basaclsa';
+        // 把相应的字符串转换为数组
+        var arr1 = str1.split('');
+        var arr2 = str2.split('');
+
+        function test(arr) {
+            // 写一个for循环，先把需要筛选的数组arr2第一个索引拿来比对
+            for (var i = 0; i < arr1.length; i++) {
+                // 如果符合，执行下一层
+                if (arr[0] === arr1[i]) {
+                    // 进入到这里说明了: arr2的第一份索引的字符，和arr1的索引的字符相同相同
+                    // 既然第一个索引相同，我们这里就声明一个变量num，让变量num依据arr2的长度去递增
+                    var num = 0
+                    function ccc(arr) {
+                        // 第一个索引相同，让他们索引分别加上变量num，
+                        //去比对他们索引后面的位置是否相同，如果满足条件继续让num递增
+                        // 直到递增变量num的值等于arr1的长度为止，这时候说明这段索引和arr1完全相同
+                        if (arr[num] === arr1[i + num]) {
+                            if (num === arr.length - 1) {
+                                console.log('符合条件的索引是', i)
+                            }
+                            num++
+                            // console.log(num)
+                            ccc(arr)
+                            // 如果不能满足条件，就让该递归跳出
+                        } else {
+                            return
+                        }
+                    }
+                    ccc(arr2)
+                }
+            }
+        }
+        test(str2)
+    </script>
+</body>
+
+</html>
