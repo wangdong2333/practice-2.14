@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var p1 = new Promise(function (resolve, reject) {
+        //     setTimeout(() => {
+        //         console.log("1000");
+        //         resolve();
+        //     }, 1000);
+        // }).then(function () {
+        //     return new Promise(function (resolve, reject) {
+        //         setTimeout(() => {
+        //             console.log('500');
+        //             resolve()
+        //         }, 500);
+        //     })
+
+        // }).then(function(){
+        //     return new Promise(function(resolve,reject){
+        //         setTimeout(() => {
+                  
+        //             console.log("2000");
+        //             resolve();
+        //         }, 2000);
+        //     })
+        // }).then(function(){
+        //     return new Promise(function(resolve,reject){
+        //         console.log("结束");
+        //     })
+        // })
+
+        var p1 = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                console.log("1000");
+                reject();
+            }, 1000);
+        }).then(function(){
+            return new Promise(function(resolve,reject){
+                console.log("成功")
+                resolve()
+            })
+        },function(){
+            return new Promise(function(resolve,reject){
+                console.log("失败");
+                resolve();
+            })
+        }).then(function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(() => {
+                    console.log("500");
+                }, 500);
+            })
+        })
+
+    </script>
+</body>
+
+</html>
