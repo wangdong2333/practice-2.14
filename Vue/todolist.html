@@ -37,14 +37,14 @@
                 <td>删除</td>
             </thead>
             <tbody>
-                <tr  v-for="(item, index) in productList" :key="index" @click="change(item)" :class="{red:item.isred}">
+                <tr  v-for="(item, index) in productList" :key="item" @click="change(item)" :class="{red:item.isred}">
                     <td><input type="checkbox" v-model="item.isred"></td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
-                    <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></td>
+                    <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs" @click="del(index)"></button></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-danger btn-xs">删除选中</button></td>
+                    <td><button type="button" class="btn btn-danger btn-xs" @click="delChecked">删除选中</button></td>
                     <td colspan="3">总价是: {{total()}} 元</td>
                 </tr>
             </tbody>
@@ -86,7 +86,7 @@
                 add(){
                     this.productList.push({
                         name:this.proName,
-                        price:this.proPrice,
+                        price:this.proPrice*1,
                         isred:false,
                     })
                 },
@@ -101,6 +101,16 @@
                         }
                     })
                     return sum;
+                },
+                delChecked(){
+                    //过滤出isred = false的（没有被选中的）
+                    var arr = this.productList.filter(function(obj,index){
+                        return obj.isred == false;
+                    })
+                    this.productList = arr;
+                },
+                del(index){
+                    this.productList.splice(index,1);
                 }
             },
         });
