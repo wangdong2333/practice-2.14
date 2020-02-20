@@ -18,6 +18,17 @@
 
     <div id="app">
         <h1 class="text-center">todolist</h1>
+        <form class="form-inline text-center">
+            <div class="form-group">
+              <label for="exampleInputName2">Name</label>
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入商品名称" v-model="proName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail2">price</label>
+              <input type="number" class="form-control" id="exampleInputEmail2" placeholder="请输入商品价格" v-model="proPrice">
+            </div>
+            <button type="submit" class="btn btn-default" @click.prevent="add()">添加</button>
+          </form>
         <table class="table table-bordered text-center">
             <thead>
                 <td>选择</td>
@@ -26,15 +37,15 @@
                 <td>删除</td>
             </thead>
             <tbody>
-                <tr  v-for="(item, index) in productList" :key="index">
-                    <td><input type="checkbox"></td>
+                <tr  v-for="(item, index) in productList" :key="index" @click="change(item)" :class="{red:item.isred}">
+                    <td><input type="checkbox" v-model="item.isred"></td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></td>
                 </tr>
                 <tr>
                     <td><button type="button" class="btn btn-danger btn-xs">删除选中</button></td>
-                    <td colspan="3">总价是: 0 元</td>
+                    <td colspan="3">总价是: {{total()}} 元</td>
                 </tr>
             </tbody>
         </table>
@@ -46,25 +57,52 @@
     <script src="vue.js"></script>
 
     <script>
-        new Vue({
+        var vm = new Vue({
             el: '#app',
             data: {
                 productList: [
                     {
                         name: '衣服',
-                        price: 256
+                        price: 256,
+                        isred:false,
                     }, {
                         name: '裤子',
-                        price: 298
+                        price: 298,
+                        isred:false,
                     }, {
                         name: '手机',
-                        price: 2998
+                        price: 2998,
+                        isred:false,
                     }, {
                         name: '鞋',
-                        price: 399
+                        price: 399,
+                        isred:false,
                     }
-                ]
-            }
+                ],
+                proName:'',
+                proPrice:'',
+            },
+            methods: {
+                add(){
+                    this.productList.push({
+                        name:this.proName,
+                        price:this.proPrice,
+                        isred:false,
+                    })
+                },
+                change(item){
+                   item.isred = !item.isred
+                },
+                total(){
+                    var sum = 0;
+                    this.productList.forEach(function(obj,index){
+                        if(obj.isred){
+                            sum += obj.price;
+                        }
+                    })
+                    return sum;
+                }
+            },
         });
 
     </script>

@@ -19,9 +19,10 @@
             年龄：<input type="number" name="" id="" v-model.number="age">
         </p>
         <p>
-         ">女
-            <p>当前性别是：{{ sex }} </p   性别：<input type="radio" name="sex" value="男" v-model="sex">男
-                <input type="radio" name="sex" value="女"v-model="sex>
+        
+            <p>当前性别是：{{ sex }} </p>
+               性别：<input type="radio" name="sex1" value="男" v-model="sex">男
+                <input type="radio" name="sex1" value="女"v-model="sex">女
         </p>
         <p>             
             <input type="checkbox" name="hobby" value=足球 v-model="hobby">足球
@@ -37,6 +38,13 @@
                 <option value="农大">农大</option>
             </select>
             <p>选取的学校是：{{ school }} </p>
+            <select name="" id="" v-model="index">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <div v-text = "index"></div>
 
         </p>
         
@@ -50,7 +58,8 @@
                 sex:'',
                 hobby:[],
                 school:'农大',
-                age:20
+                age:20,
+                index:1,
                 }
         })
     </script>
