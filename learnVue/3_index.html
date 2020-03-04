@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="2_kvue(实现数据的响应式).js"></script>
+    <script>
+        const app = new Kvue({
+            data:{
+                school:"北大",
+                student:{
+                    name:"zs",
+                    hobby:{
+                        eat:"麻辣烫"
+                    }
+                }
+            }
+
+        });
+
+        app.$data.school = '清华';
+        app.$data.student.name = "lisi";
+        app.$data.student.hobby.eat = "麻辣拌";
+
+    </script>
+</body>
+</html>
