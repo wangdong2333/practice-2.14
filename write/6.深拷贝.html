@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    //该方法也是有局限性的：
+    // 会忽略 undefined
+    // 会忽略 symbol
+    // 不能序列化函数
+    // 不能解决循环引用的对象
+    var arr = ['old', 1, true, ['old1', 'old2'], {old: 1}]
+    var new_arr = JSON.parse(JSON.stringify(arr));
+    */
+
+    // var deepCopy = function (obj) {
+    //   if (typeof obj !== 'object') return;
+    //   var newObj = obj instanceof Array ? [] : {};
+    //   for (var key in obj) {
+    //     if (obj.hasOwnProperty(key)) {
+    //       newObj[key] = typeof obj[key] === 'object' ? deepCopy(obj[key]) : obj[key];
+    //     }
+    //   }
+    //   return newObj;
+    // }
+
+
+    var deepClone = function (obj) {
+      if (typeof obj !== 'object') return;
+      var newObj = obj instanceof Array ? [] : {};
+      for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          newObj[key] = typeof obj[key] === 'object' ? deepCopy(obj[key]) : obj[key]
+        }
+      }
+      return newObj;
+    }
+
+    let obj = {
+      a: [1, 2, 3],
+      b: {
+        c: 2,
+        d: 3
+      }
+    }
+    let newObj = deepClone(obj)
+    newObj.b.c = 1
+    console.log(obj.b.c) // 2
+  </script>
+</body>
+
+</html>

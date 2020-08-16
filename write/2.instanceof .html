@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function myInstanceof(left, right) {
+      let prototype = right.prototype;  // 取右表达式的 prototype 值
+      left = left.__proto__;  // 取左表达式的__proto__值
+      while (true) {
+        if (left === null || left === undefined)
+          return false;
+        if (prototype === left)
+          return true;
+        //往下走
+        left = left.__proto__;
+      }
+    }
+    
+    //链接：https://mp.weixin.qq.com/s/dw5D6wpOKJTlc_mNKjAPdQ
+  </script>
+</body>
+
+</html>

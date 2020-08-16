@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // function foo(a) {
+        // //     return a = a * 10;
+        // // }
+        // // function bar(b) {
+        // //     return b.value = 'new';
+        // // }
+        // var a = 1;
+        // // var b = { value: 'old' };
+        // a = a * 10;
+        // // foo(a);
+        // // bar(b);
+        // // console.log(foo(a));//10
+        // // console.log(bar(b));//new
+        // console.log(a); // 1
+        // // console.log(b); // value: new
+
+        // // 值类型
+        // var a = 10
+        // // var b = a
+        // // b = 20
+        // a = a * 10;
+        // console.log(a)  // 10
+        // // console.log(b)  // 20
+
+
+        // var obj = {
+        //     a: 1,
+        //     b: [1, 2, 3]
+        // }
+        // var a = obj.a
+        // var b = obj.b
+        // a = 2
+        // b.push(4)
+        // console.log(obj, a, b)
+
+        // function foo(b) {
+        //     b = b * 10;
+        // }
+
+        // function foo(a) {
+        //     a = a * 10;
+        // }
+        // var a = 1;
+        // foo(a);
+        // console.log(a); // 1
+
+
+        var a = { n: 1 }
+        var b = a;
+        a.x = a = { n: 2 }
+        console.log(a);
+        console.log(b) 
+
+        // 原型：http://www.luyixian.cn/news_show_348065.aspx
+
+    </script>
+</body>
+
+</html>

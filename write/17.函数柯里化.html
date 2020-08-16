@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 函数柯里化指的是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。
+    // 链接：https://juejin.im/post/5b8350246fb9a019c372d26d#heading-2 || 前端总结98
+
+    function curry(fn, args) {
+      // 获取函数需要的参数长度
+      let length = fn.length;
+
+      args = args || [];
+
+      return function () {
+        let subArgs = args.slice(0);
+
+        // 拼接得到现有的所有参数
+        subArgs = subArgs.concat(Array.prototype.slice.call(arguments))
+        // for (let i = 0; i < arguments.length; i++) {
+        //   subArgs.push(arguments[i]);
+        // }
+
+        // 判断参数的长度是否已经满足函数所需参数的长度
+        if (subArgs.length >= length) {
+          // 如果满足，执行函数
+          return fn.apply(this, subArgs);
+        } else {
+          // 如果不满足，递归返回科里化的函数，等待参数的传入
+          return curry.call(this, fn, subArgs);
+        }
+      };
+    }
+
+    function add(a, b, c) {
+      return a + b + c;
+    }
+    var _add = curry(add)
+    console.log(_add(1, 2, 3))
+    console.log(_add(1)(2)(3))
+    console.log(_add(1, 2)(3))
+
+
+
+    // es6 实现
+    function curry(fn, ...args) {
+      return args.length >= fn.length ? fn(...args) : curry.bind(null, fn, ...args);
+    }
+
+
+
+
+    function multi() {
+      var args = Array.prototype.slice.call(arguments);
+      var fn = function () {
+        var newArgs = args.concat(Array.prototype.slice.call(arguments));
+        return multi.apply(this, newArgs);
+      }
+      fn.toString = function () {
+        return args.reduce(function (a, b) {
+          return a * b;
+        })
+      }
+      return fn;
+    }
+  </script>
+</body>
+
+</html>

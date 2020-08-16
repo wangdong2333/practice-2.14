@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    Function.prototype.call = function (context) {
+      var context = context || window;
+      context.fn = this;
+
+      //下面的方法执行结束后 args = [arguments[1], arguments[2], ...]，而不是直接把参数的值push进去，
+      //这样做的原因是如果参数是对象的话，你直接给push进去了，调用eval变成字符串的方法就变成object那样了，就不行了。
+      var args = [];
+      for (var i = 1, len = arguments.length; i < len; i++) {
+        args.push('arguments[' + i + ']');
+      }
+
+      //执行完下面的eval方法 result = context.fn(arguments[1], arguments[2], ...);这样就可以取参数进来了
+      var result = eval('context.fn(' + args + ')');
+
+      // var result = context.fn(...Array.from(arguments).slice(1))
+
+      // args = [...arguments].slice(1);
+      // let result = context.fn(...args);
+
+      delete context.fn
+      return result;
+    }
+    new set([...arr])
+
+
+    //链接：https://github.com/mqyqingfeng/Blog/issues/11
+
+
+
+
+    Function.prototype.myCall = function (context) {
+      if (typeof this !== 'function') {
+        throw new TypeError('Error')
+      }
+      context = context || window
+      context.fn = this
+      const args = [...arguments].slice(1)
+      const result = context.fn(...args)
+      delete context.fn
+      return result
+    }
+  </script>
+</body>
+
+</html>

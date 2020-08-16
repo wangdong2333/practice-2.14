@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 子元素要定高
+  #div1 {
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    border: 1px solid #000;
+    position: relative;
+  }
+
+  #sp1 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #f00;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  } */
+
+  /* 
+  #div1 {
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sp1 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #f00;
+   
+  } */
+
+  #div1 {
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    border: 1px solid #000;
+    position: relative;
+  }
+
+  #sp1 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #f00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-left: -50px;
+    margin-top: -50px; */
+    transform: translate(-50%,-50%);
+  }
+</style>
+
+<body>
+  <div id="div1">
+    <span id="sp1"></span>
+  </div>
+
+  <!-- 链接：https://juejin.im/post/5854e137128fe100698e6271#heading-1
+             https://juejin.im/post/582c04032f301e00594327d4#heading-2 -->
+</body>
+
+</html>

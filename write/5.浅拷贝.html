@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let a = {
+    //   age: 1
+    // }
+    // let b = Object.assign({}, a)
+    // a.age = 2
+    // console.log(b.age) // 1
+
+    // let a = {
+    //   age: 1
+    // }
+    // let b = {
+    //   ...a
+    // }
+    // a.age = 2
+    // console.log(b.age) // 1
+
+
+
+    var shallowCopy = function (obj) {
+      // 只拷贝对象
+      if (typeof obj !== 'object') return;
+      // 根据obj的类型判断是新建一个数组还是对象
+      var newObj = obj instanceof Array ? [] : {};
+      // 遍历obj，并且判断是obj的属性才拷贝
+      for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          newObj[key] = obj[key];
+        }
+      }
+      return newObj;
+    }
+
+
+    // 浅拷贝只解决了第一层的问题，如果接下去的值中还有对象的话，那么就又回到最开始的话题了，
+    // 两者享有相同的地址。要解决这个问题，我们就得使用深拷贝了。
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 第二版
+    function create() {
+      // 创建一个空的对象
+      var obj = new Object();
+      // 获得构造函数，arguments中去除第一个参数
+      var Con = [].shift.call(arguments);
+      // 链接到原型，obj 可以访问到构造函数原型中的属性
+      obj.__proto__ = Con.prototype;
+      // 绑定 this 实现继承，obj 可以访问到构造函数中的属性
+      var res = Con.apply(obj, arguments);
+      // 优先返回构造函数返回的对象,判断下返回的值是不是一个对象，如果是对象则返回这个对象，不然返回新创建的 obj对象。
+      return res instanceof Object ? res : obj;
+    };
+
+    //链接：https://juejin.im/post/5c11f3aaf265da61441feaec
+  </script>
+</body>
+
+</html>
